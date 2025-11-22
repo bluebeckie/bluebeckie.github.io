@@ -43,10 +43,26 @@ li {margin: 10px 0;}
     height: 100%;
     display: block;
 }
+#headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.column {
+    flex: 1;
+}
+
+.column.social-links {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .social-links ul {
     display: flex;
-    padding-left: 20px;
+    padding: 0 0 10px 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -56,3 +72,8 @@ li {margin: 10px 0;}
     margin: 0 5px 0 0;
 }
 
+.contact-info {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
