@@ -18,10 +18,17 @@ li {margin: 10px 0;}
     list-style-type: none;
 }
 
+#experience > ul > li > ul > li {
+    list-style-type: disc;
+}
+
+#experience .y-service {
+    padding-left: 1em;
+}
+
 .clearfix {zoom:1;}
 .clearfix:after {clear:both;content:'.';display:block;height:0;visibility:hidden;}
-
-.resume {border:1px solid #666;margin:10px auto;padding: 10px;width:750px;}
+.resume { border:1px solid #666; margin:10px auto; padding: 10px; width:800px;}
 
 @media only screen and (max-width: 750px) {
     .resume {
@@ -30,10 +37,6 @@ li {margin: 10px 0;}
         width: auto;
     }
 }
-
-
-
-
 
 .social-links img {
     width: 100%;
