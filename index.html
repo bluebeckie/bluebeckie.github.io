@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beckie Fang | Visionary AI & Digital Transformation Consultant</title>
+    <!-- Use Inter font for clean professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            /* Color Palette: Refined & Contemporary (from user image) */
+            --color-peach: #F1C5AE; /* Soft Peach (Secondary Accent 1, for metrics/light highlights) */
+            --color-light-sage: #CED2C2; /* Light Sage (Neutral/Borders) */
+            --color-dusty-teal: #92B1B6; /* Dusty Teal/Blue-Gray (Primary Accent/CTA) */
+            --color-navy: #35455D; /* Deep Navy/Slate (Primary Text/Dark Section Background) */
+            --color-light-bg: #F8FAFC; /* Very Light Off-White Background - slate-50 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-light-bg);
+            color: var(--color-navy);
+            scroll-behavior: smooth;
+        }
+        /* Custom class for the deep navy background section */
+        .bg-navy-section {
+            background-color: var(--color-navy);
+            color: white;
+        }
+
+        /* Hero Section with Background Image */
+        .hero-with-bg {
+            background-image: url('https://img1.wsimg.com/isteam/getty/2162645349/:/rs=w:2558,m');
+            background-size: cover;
+            background-position: center 30%; /* Adjust to keep focus */
+            background-attachment: fixed; /* Optional: adds parallax feel */
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            position: relative;
+        }
+        /* Overlay to ensure text visibility */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(53, 69, 93, 0.9); /* Dark Navy with 90% opacity */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Custom class for the accent button */
+        .btn-accent {
+            background-color: var(--color-dusty-teal); /* Changed to Dusty Teal */
+            color: white;
+            transition: background-color 0.3s;
+            /* Shadow adjusted to Dusty Teal */
+            box-shadow: 0 4px 6px -1px rgba(146, 177, 182, 0.5), 0 2px 4px -2px rgba(146, 177, 182, 0.5); 
+        }
+        .btn-accent:hover {
+            background-color: #79a1a6; /* Slightly darker Dusty Teal for hover */
+        }
+        
+        /* Style for the prominent metric display */
+        .metric-box {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1); /* subtle shadow */
+            transition: transform 0.3s;
+        }
+        .metric-box:hover {
+            transform: translateY(-4px);
+        }
+        /* Color for the metrics text */
+        .text-peach-accent {
+            color: var(--color-peach); 
+        }
+
+        /* Custom classes for the language switch */
+        .lang-switch {
+            border: 1px solid white;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .lang-btn {
+            padding: 0.35rem 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 0.875rem; /* text-sm */
+        }
+        .lang-btn.active {
+            background-color: var(--color-dusty-teal); /* Changed to Dusty Teal */
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Language Content Data Storage -->
+    <script>
+        // SEO Mandate: The title and meta description must also be switched.
+        const pageTitle = {
+            en: "Beckie Fang | Visionary AI & Digital Transformation Consultant",
+            zh: "方翠鴻 (Beckie) | AI與數位轉型願景領導者",
+        };
+        const metaDesc = {
+            en: "Senior consultant specializing in corporate AI strategy, digital transformation, and executive advisory. Proven 75% efficiency gains and IDC Award Winner.",
+            zh: "資深顧問，專精於企業AI策略、數位轉型和高階主管諮詢。實證75%效率提升，IDC大獎得主。",
+        };
+
+        const content = {
+            en: {
+                home: "Home", expertise: "Expertise", caseStudies: "Case Studies", contact: "Contact",
+                headline: "Visionary Leadership for AI-Powered Business Acceleration and Sustainable Growth.",
+                subHeadline: "Strategically incorporating new technologies, like AI, to accelerate business operation efficiency and cultivate the culture for growth mindset to endure transformation.",
+                ctaButton: "Get in Touch", ctaPrompt: "Initiate a conversation about corporate AI strategy, digital transformation, or executive advisory.",
+                proofPoints: [
+                    { title: "AI & Cost Reduction", text: "Reduced human work for critical processes by 75% (from 4 months to 1 month) through redesigning digital workflow and implementing automation." },
+                    { title: "Digital Transformation", text: "Led legacy on-prem CRM to cloud-native microservices migration, winning the 2023 IDC Future Enterprise Award." },
+                    { title: "Strategic Governance", text: "Established enterprise-wide Agile operating models and standardized SDLC frameworks." }
+                ],
+                aboutTitle: "From Technical Mastery to Corporate Transformation.",
+                aboutBody: "My career arc began with deep technical mastery in essential domains like front-end development, SEO, and web performance optimization. This foundation rapidly evolved into full-stack development ecosystem ownership, where I led high-impact, global initiatives such as major platform rebranding deliveries with zero downtime. I have since strategically expanded my focus to the corporate transformation ecosystem, leading enterprises through successful digital transformations, establishing enterprise-wide Agile operating models, and leveraging new technology, including AI, for business acceleration, security, and efficiency.",
+                caseStudyTitle: "Featured Case Study: Award-Winning CRM Modernization",
+                caseStudySub: "A strategic transformation from monolithic legacy systems to a cloud-native microservices ecosystem.",
+                caseStudyMetricLabel: "Efficiency Gain",
+                // Case Study Details for translation
+                caseStudyDetails: [
+                    { 
+                        title: "Challenge: Operational Bottlenecks", 
+                        body: "Four months of human work was required for key organizational processes, hindering agility and creating high labor costs within a rigid, legacy monolithic CRM." 
+                    },
+                    { 
+                        title: "Solution: Visionary Transformation", 
+                        body: "Led the complete pivot to a cloud-native microservices ecosystem on D365, complemented by redesigned digital workflows and robust automation." 
+                    },
+                    { 
+                        title: "Impact: Industry Validation & ROI", 
+                        // Using span for styling since innerHTML is used
+                        body: "Resulted in a validated <span class='font-bold'>75% efficiency gain</span> and industry recognition by winning the <span class='font-bold'>2023 IDC Future Enterprise Award</span>, proving successful strategic execution and measurable ROI." 
+                    }
+                ],
+                viewAll: "View All Case Studies",
+                formName: "Name", formCompany: "Company", formEmail: "Email", formMessage: "Message", formSubmit: "Send Message",
+                // Updated copyright text to use a {year} placeholder
+                footerCopyright: "© {year} Beckie Fang. All rights reserved.",
+            },
+            zh: {
+                home: "首頁", expertise: "專業領域", caseStudies: "成果案例", contact: "聯繫洽談",
+                headline: "願景領導：驅動 AI 商業加速與企業永續成長",
+                subHeadline: "以策略性地整合 AI 等新技術，增進營運效率，並建立持久文化轉型的成長思維。",
+                ctaButton: "聯繫洽談", ctaPrompt: "啟動企業數位化與 AI 策略、數位轉型諮詢的對話。",
+                proofPoints: [
+                    { title: "AI 與成本縮減", text: "透過數位工作流程和自動化，將關鍵流程所需的人工作業減少75%（從4個月縮短至1個月）。" },
+                    { title: "數位轉型成就", text: "主導舊有地端 CRM 系統轉換為雲原生微服務，榮獲 2023 IDC 未來企業大獎。" },
+                    { title: "策略治理", text: "建立企業級敏捷運營模式和標準化 SDLC 框架，整合團隊、流程和目標。" }
+                ],
+                aboutTitle: "從技術專精到企業轉型。",
+                aboutBody: "我的職涯始於前端開發、SEO 和網頁性能優化等關鍵領域的深厚技術專精。此基礎迅速發展為全端開發生態系統的所有權，主導了諸如重要平台品牌重塑等高影響力、零停機的全球性專案。此後，我策略性地將重心擴展到企業轉型生態系統，引導企業成功實施數位轉型、建立企業級敏捷運營模式，並利用包括AI在內的新技術來加速業務、確保安全與提升效率。",
+                caseStudyTitle: "精選案例：獲獎的 CRM 現代化專案",
+                caseStudySub: "一項從單體式遺留系統到雲原生微服務生態系統的策略性轉型。",
+                caseStudyMetricLabel: "效率提升",
+                caseStudyDetails: [
+                    {
+                        title: "挑戰：營運瓶頸",
+                        body: "關鍵組織流程需耗費四個月的人工工時，降低敏捷性，並在僵化的傳統單體式 CRM 中造成高昂的人力成本。"
+                    },
+                    {
+                        title: "解決方案：前瞻性轉型",
+                        body: "主導全面轉向 D365 雲原生微服務生態系統，輔以重新設計的數位工作流程和強大的自動化。"
+                    },
+                    {
+                        title: "影響：產業驗證與投資回報",
+                        // Using span for styling since innerHTML is used
+                        body: "實現了經驗證的 <span class='font-bold'>75% 效率提升</span>，並透過贏得 <span class='font-bold'>2023 IDC 未來企業大獎</span> 獲得業界認可，證明了成功的策略執行與可衡量的投資回報。"
+                    }
+                ],
+                viewAll: "查看所有案例",
+                formName: "姓名", formCompany: "公司", formEmail: "電子郵件", formMessage: "訊息", formSubmit: "發送訊息",
+                // Updated copyright text to use a {year} placeholder
+                footerCopyright: "© {year} (Beckie Fang) 版權所有。",
+            }
+        };
+
+        let currentLang = 'en';
+
+        // Function to set document language attributes and content based on currentLang
+        function updateContent() {
+            const data = content[currentLang];
+            const currentYear = new Date().getFullYear();
+
+            // 1. Update Title and Meta Description (SEO Mandate)
+            document.title = pageTitle[currentLang];
+            document.querySelector('meta[name="description"]').setAttribute('content', metaDesc[currentLang]);
+            document.documentElement.lang = currentLang;
+
+            // 2. Update Navigation
+            document.getElementById('nav-home').textContent = data.home;
+            document.getElementById('nav-expertise').textContent = data.expertise;
+            document.getElementById('nav-caseStudies').textContent = data.caseStudies;
+            document.getElementById('nav-contact').textContent = data.contact;
+
+            // 3. Update Hero Section
+            document.getElementById('h1-headline').textContent = data.headline;
+            document.getElementById('sub-headline').textContent = data.subHeadline;
+            document.getElementById('cta-button').textContent = data.ctaButton;
+            document.getElementById('cta-prompt').textContent = data.ctaPrompt;
+
+            // 4. Update Proof Points
+            const ppTitles = document.querySelectorAll('[data-proof-title]');
+            const ppTexts = document.querySelectorAll('[data-proof-text]');
+            data.proofPoints.forEach((p, i) => {
+                if (ppTitles[i]) ppTitles[i].textContent = p.title;
+                if (ppTexts[i]) ppTexts[i].textContent = p.text;
+            });
+
+            // 5. Update About Section
+            document.getElementById('about-title').textContent = data.aboutTitle;
+            document.getElementById('about-body').textContent = data.aboutBody;
+
+            // 6. Update Case Study
+            document.getElementById('cs-title').textContent = data.caseStudyTitle;
+            document.getElementById('cs-sub').textContent = data.caseStudySub;
+            document.getElementById('cs-metric-label').textContent = data.caseStudyMetricLabel;
+            document.getElementById('cs-view-all').textContent = data.viewAll;
+
+            // 7. Update Case Study Details
+            const csDetails = data.caseStudyDetails;
+            document.getElementById('cs-detail-1-title').textContent = csDetails[0].title;
+            document.getElementById('cs-detail-1-body').innerHTML = csDetails[0].body;
+            document.getElementById('cs-detail-2-title').textContent = csDetails[1].title;
+            document.getElementById('cs-detail-2-body').innerHTML = csDetails[1].body;
+            document.getElementById('cs-detail-3-title').textContent = csDetails[2].title;
+            document.getElementById('cs-detail-3-body').innerHTML = csDetails[2].body;
+
+            // 8. Update Contact Form
+            document.getElementById('form-name-label').textContent = data.formName;
+            document.getElementById('form-company-label').textContent = data.formCompany;
+            document.getElementById('form-email-label').textContent = data.formEmail;
+            document.getElementById('form-message-label').textContent = data.formMessage;
+            document.getElementById('form-submit-btn').textContent = data.formSubmit;
+
+            // 9. Update Footer - Now dynamically replacing the {year} placeholder
+            let footerText = data.footerCopyright.replace('{year}', currentYear);
+            document.getElementById('footer-copyright').textContent = footerText;
+
+            // 10. Update Language Toggle Visuals
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('lang-zh').classList.remove('active');
+            document.getElementById(`lang-${currentLang}`).classList.add('active');
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('beckie_lang', lang);
+            updateContent();
+        }
+
+        // Initialize language on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('beckie_lang');
+            if (savedLang && content[savedLang]) {
+                currentLang = savedLang;
+            }
+            updateContent();
+        });
+
+        // Placeholder for Contact Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            // In a real application, this would send data to a backend service.
+            const name = document.getElementById('form-name').value;
+            const thankYouMessage = currentLang === 'en'
+                ? `Thank you, ${name}! Your inquiry has been noted. I will respond shortly.`
+                : `感謝您，${name}！您的詢問已記錄。我將盡快回覆您。`;
+            
+            // Using alert() for simplicity in this sandbox environment as mandated for non-modal messages.
+            alert(thankYouMessage); 
+            event.target.reset();
+        }
+    </script>
+    <meta name="description" content="Senior consultant specializing in corporate AI strategy, digital transformation, and executive advisory. Proven 75% efficiency gains and IDC Award Winner.">
+    <!-- End of SEO Mandate: Meta Description -->
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-navy-section shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Name -->
+            <a href="#top" class="text-xl font-bold text-white tracking-wider">
+                <span id="brand-name">Beckie Fang</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8">
+                <a id="nav-home" href="#home" class="text-white hover:text-light-sage transition">Home</a>
+                <a id="nav-expertise" href="#expertise" class="text-white hover:text-light-sage transition">Expertise</a>
+                <a id="nav-caseStudies" href="#results" class="text-white hover:text-light-sage transition">Case Studies</a>
+                <a id="nav-contact" href="#contact" class="text-white hover:text-light-sage transition">Contact</a>
+            </nav>
+
+            <!-- Language Switch -->
+            <div class="lang-switch flex">
+                <button id="lang-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+                <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-with-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- H1 Tag for SEO -->
+            <h1 id="h1-headline" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto mb-6 text-white leading-tight">
+                Visionary Leadership for AI-Powered Business Acceleration and Sustainable Growth.
+            </h1>
+            <p id="sub-headline" class="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto mb-10">
+                Strategically incorporating new technologies, like AI, to accelerate business goals (cost reduction) and cultivate the growth mindset necessary for enduring cultural transformation.
+            </p>
+            
+            <div class="space-y-4">
+                <p id="cta-prompt" class="text-slate-200 text-lg font-medium">
+                    Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory.
+                </p>
+                <a href="#contact" id="cta-button" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-medium rounded-xl btn-accent">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Points Banner -->
+    <section id="proof" class="py-16 -mt-10 sm:-mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Proof Point 1: AI & Cost Reduction -->
+                <div class="metric-box p-6 sm:p-8 text-center">
+                    <div class="text-5xl font-extrabold text-peach-accent mb-2">75%</div>
+                    <h3 data-proof-title class="text-xl font-semibold mb-3" style="color: var(--color-navy);">AI & Cost Reduction</h3>
+                    <p data-proof-text class="text-slate-600 text-sm">Reduced human work for critical processes by 75% (from 4 months to 1 month) through digital workflow and AI-powered automation.</p>
+                </div>
+                <!-- Proof Point 2: Digital Transformation -->
+                <div class="metric-box p-6 sm:p-8 text-center">
+                    <div class="text-5xl font-extrabold text-peach-accent mb-2">IDC</div>
+                    <h3 data-proof-title class="text-xl font-semibold mb-3" style="color: var(--color-navy);">Digital Transformation</h3>
+                    <p data-proof-text class="text-slate-600 text-sm">Led legacy CRM to cloud-native microservices migration, winning the 2023 IDC Future Enterprise Award.</p>
+                </div>
+                <!-- Proof Point 3: Strategic Governance -->
+                <div class="metric-box p-6 sm:p-8 text-center">
+                    <div class="text-5xl font-extrabold text-peach-accent mb-2">Agile</div>
+                    <h3 data-proof-title class="text-xl font-semibold mb-3" style="color: var(--color-navy);">Strategic Governance</h3>
+                    <p data-proof-text class="text-slate-600 text-sm">Established enterprise-wide Agile operating models and standardized SDLC frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Career Arc -->
+    <section id="expertise" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <!-- Image Placeholder - Executives value professional portraits -->
+            <div class="lg:col-span-1 flex justify-center">
+                <!-- 
+                    Head Image Specifications:
+                    - Placement: Expertise / About Section
+                    - Style: Professional, dynamic, executive portrait.
+                    - Aspect Ratio: 1:1 (Square).
+                    - Resolution: Minimum 800x800px.
+                    - Background: Neutral, slightly blurred, or matching the Deep Navy/Teal theme.
+                -->
+                <div class="w-64 h-64 sm:w-80 sm:h-80 bg-slate-200 rounded-full border-4 shadow-xl flex items-center justify-center text-slate-600 p-4 text-center font-semibold text-sm"
+                     style="border-color: var(--color-dusty-teal);">
+                    Head Image Placeholder (1:1 Ratio)
+                </div>
+            </div>
+
+            <!-- Bio Content -->
+            <div class="lg:col-span-2">
+                <h2 id="about-title" class="text-3xl sm:text-4xl font-bold mb-6" style="color: var(--color-navy);">
+                    From Technical Mastery to Corporate Transformation.
+                </h2>
+                <p id="about-body" class="text-lg text-slate-700 leading-relaxed">
+                    My career arc began with deep technical mastery in essential domains like front-end development, SEO, and web performance optimization. This foundation rapidly evolved into full-stack development ecosystem ownership, where I led high-impact, global initiatives such as major platform rebranding deliveries with zero downtime. I have since strategically expanded my focus to the corporate transformation ecosystem, leading enterprises through successful digital transformations, establishing enterprise-wide Agile operating models, and leveraging new technology, including AI, for business acceleration, security, and efficiency.
+                </p>
+                <!-- Credentials Summary -->
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--color-dusty-teal);">Key Credentials</h3>
+                    <ul class="flex flex-wrap gap-4 text-sm text-slate-600">
+                        <li class="px-3 py-1 rounded-full border border-slate-300" style="background-color: var(--color-light-sage);">2023 IDC Future Enterprise Award</li>
+                        <li class="px-3 py-1 rounded-full border border-slate-300" style="background-color: var(--color-light-sage);">AI & Gemini Skill Badges (Google)</li>
+                        <li class="px-3 py-1 rounded-full border border-slate-300" style="background-color: var(--color-light-sage);">Certified ScrumMaster (CSM)</li>
+                        <li class="px-3 py-1 rounded-full border border-slate-300" style="background-color: var(--color-light-sage);">ISO-27001 / ITILv4 Knowledge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Snapshot -->
+    <section id="results" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="cs-title" class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
+                Featured Case Study: Award-Winning CRM Modernization
+            </h2>
+            <p id="cs-sub" class="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
+                A strategic transformation from monolithic legacy systems to a cloud-native microservices ecosystem.
+            </p>
+
+            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border border-slate-200">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Metric Callout -->
+                    <div class="lg:col-span-1 border-r border-slate-200 lg:pr-8">
+                        <p id="cs-metric-label" class="text-xl font-medium text-slate-500 uppercase tracking-wider mb-2">Efficiency Gain</p>
+                        <p class="text-6xl sm:text-7xl font-extrabold text-peach-accent">75%</p>
+                        <p class="text-lg text-slate-600 mt-2">Reduction in human work for critical processes (4 months down to 1 month).</p>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <span class="font-bold text-xl mt-1" style="color: var(--color-dusty-teal);">&#10003;</span>
+                            <div>
+                                <h3 id="cs-detail-1-title" class="text-xl font-semibold" style="color: var(--color-navy);">Challenge: Operational Bottlenecks</h3>
+                                <p id="cs-detail-1-body" class="text-slate-700">Four months of human work was required for key organizational processes, hindering agility and creating high labor costs within a rigid, legacy monolithic CRM.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="font-bold text-xl mt-1" style="color: var(--color-dusty-teal);">&#10003;</span>
+                            <div>
+                                <h3 id="cs-detail-2-title" class="text-xl font-semibold" style="color: var(--color-navy);">Solution: Visionary Transformation</h3>
+                                <p id="cs-detail-2-body" class="text-slate-700">Led the complete pivot to a cloud-native microservices ecosystem on D365, complemented by redesigned digital workflows and robust automation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="font-bold text-xl mt-1" style="color: var(--color-dusty-teal);">&#10003;</span>
+                            <div>
+                                <h3 id="cs-detail-3-title" class="text-xl font-semibold" style="color: var(--color-navy);">Impact: Industry Validation & ROI</h3>
+                                <p id="cs-detail-3-body" class="text-slate-700">Resulted in a validated **75% efficiency gain** and industry recognition by winning the **2023 IDC Future Enterprise Award**, proving successful strategic execution and measurable ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" id="cs-view-all" class="inline-flex items-center justify-center px-6 py-2 border text-base font-medium rounded-xl hover:bg-slate-200 transition"
+                   style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
+                    View All Case Studies
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Primary CTA) -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
+                <span id="cta-prompt-contact" style="color: var(--color-dusty-teal);">Let's Discuss Your Next Transformation.</span>
+            </h2>
+            <p class="text-xl text-slate-600 mb-12 text-center">
+                Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory.
+            </p>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-6 p-8 bg-slate-100 rounded-xl shadow-lg border border-slate-200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label id="form-name-label" for="form-name" class="block text-sm font-medium text-slate-700">Name</label>
+                        <input type="text" id="form-name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500 border p-3">
+                    </div>
+                    <div>
+                        <label id="form-company-label" for="form-company" class="block text-sm font-medium text-slate-700">Company</label>
+                        <input type="text" id="form-company" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500 border p-3">
+                    </div>
+                </div>
+                <div>
+                    <label id="form-email-label" for="form-email" class="block text-sm font-medium text-slate-700">Email</label>
+                    <input type="email" id="form-email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500 border p-3">
+                </div>
+                <div>
+                    <label id="form-message-label" for="form-message" class="block text-sm font-medium text-slate-700">Message</label>
+                    <textarea id="form-message" rows="4" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-cyan-500 focus:ring-cyan-500 border p-3"></textarea>
+                </div>
+                <div>
+                    <button type="submit" id="form-submit-btn" class="w-full py-3 px-4 rounded-xl btn-accent font-semibold text-lg">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-section py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- LinkedIn Icon (Link updated previously) -->
+                <a href="https://www.linkedin.com/in/beckiefang/" target="_blank" class="text-white hover:text-light-sage transition" aria-label="LinkedIn Profile">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-.92-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.568-4 0v5.604h-3v-11h3v1.765c1.395-2.82 7-2.734 7 2.228v7.007z"/>
+                    </svg>
+                </a>
+                <!-- Email Icon (Link updated previously) -->
+                <a href="mailto:beckie@beckiefang.com" class="text-white hover:text-light-sage transition" aria-label="Email Address">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+            </div>
+            <p id="footer-copyright" class="text-sm text-slate-400">
+                <!-- Content will be set by JavaScript on load -->
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
