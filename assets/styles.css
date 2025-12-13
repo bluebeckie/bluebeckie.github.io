@@ -1,0 +1,97 @@
+:root {
+    /* Color Palette: Refined & Contemporary (from user image) */
+    --color-peach: #F1C5AE; /* Soft Peach (Secondary Accent 1, for metrics/light highlights) */
+    --color-light-sage: #CED2C2; /* Light Sage (Neutral/Borders) */
+    --color-dusty-teal: #92B1B6; /* Dusty Teal/Blue-Gray (Primary Accent/CTA) */
+    --color-navy: #35455D; /* Deep Navy/Slate (Primary Text/Dark Section Background) */
+    --color-light-bg: #F8FAFC; /* Very Light Off-White Background - slate-50 */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-light-bg);
+    color: var(--color-navy);
+    scroll-behavior: smooth;
+}
+
+/* Custom class for the deep navy background section */
+.bg-navy-section {
+    background-color: var(--color-navy);
+    color: white;
+}
+
+/* Hero Section with Background Image */
+.hero-with-bg {
+    background-image: url('https://live.staticflickr.com/3939/15609569106_7c65e24d7b_k.jpg');
+    background-size: cover;
+    background-position: center 30%; /* Adjust to keep focus */
+    background-attachment: fixed; /* Optional: adds parallax feel */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+/* Overlay to ensure text visibility */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(53, 69, 93, 0.9); /* Dark Navy with 90% opacity */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Custom class for the accent button */
+.btn-accent {
+    background-color: var(--color-dusty-teal); /* Changed to Dusty Teal */
+    color: white;
+    transition: background-color 0.3s;
+    /* Shadow adjusted to Dusty Teal */
+    box-shadow: 0 4px 6px -1px rgba(146, 177, 182, 0.5), 0 2px 4px -2px rgba(146, 177, 182, 0.5);
+}
+
+.btn-accent:hover {
+    background-color: #79a1a6; /* Slightly darker Dusty Teal for hover */
+}
+
+/* Style for the prominent metric display */
+.metric-box {
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1); /* subtle shadow */
+    transition: transform 0.3s;
+}
+
+.metric-box:hover {
+    transform: translateY(-4px);
+}
+
+/* Color for the metrics text */
+.text-peach-accent {
+    color: var(--color-peach);
+}
+
+/* Custom classes for the language switch */
+.lang-switch {
+    border: 1px solid white;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.lang-btn {
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.875rem; /* text-sm */
+}
+
+.lang-btn.active {
+    background-color: var(--color-dusty-teal); /* Changed to Dusty Teal */
+    color: white;
+    font-weight: 600;
+}
