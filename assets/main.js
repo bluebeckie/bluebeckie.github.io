@@ -1,11 +1,11 @@
 // SEO Mandate: The title and meta description must also be switched.
 const pageTitle = {
     en: "Beckie Fang | Visionary AI & Digital Transformation Consultant",
-    zh: "方翠鴻 (Beckie) | AI與數位轉型願景領導者",
+    zh: "方翠鴻 (Beckie) | AI 與數位轉型願景領導者",
 };
 const metaDesc = {
     en: "Senior consultant specializing in corporate AI strategy, digital transformation, and executive advisory. Proven 75% efficiency gains and IDC Award Winner.",
-    zh: "資深顧問，專精於企業AI策略、數位轉型和高階主管諮詢。實證75%效率提升，IDC大獎得主。",
+    zh: "資深顧問，專精於企業 AI 策略、數位轉型和高階主管諮詢。實證 75% 效率提升，IDC 大獎得主。",
 };
 
 const content = {
@@ -83,7 +83,7 @@ const content = {
         caseStudyTitle: "精選案例：獲獎的 CRM 現代化專案",
         caseStudySub: "一項從單體式遺留系統到雲原生微服務生態系統的策略性轉型。",
         caseStudyMetricLabel: "效率提升",
-        caseStudyMetricDescription: "關鍵流程人力縮減 75%: 從 4 個月到 1 個月。",
+        caseStudyMetricDescription: "關鍵流程人力縮減 75% - 從 4 個月到 1 個月。",
         // Case Study Details for translation
         caseStudyDetails: [
             {
