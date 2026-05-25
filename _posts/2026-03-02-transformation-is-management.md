@@ -1,6 +1,6 @@
 ---
 title: "Transformation Is Management"
-title_en: "It's Not About Transformation, It's About Management"
+title_en: "【Management Monday】It's Not About Transformation, It's About Management"
 title_zh: "【Management Monday】說得是轉型，其實還是管理"
 date: 2026-03-02
 categories: [management, transformation, leadership]

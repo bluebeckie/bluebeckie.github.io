@@ -1,6 +1,6 @@
 ---
 title: "Sustainable Information Architecture"
-title_en: "Sustainable Information Architecture for Resource-Constrained Organizations"
+title_en: "【Tactics Tuesday】Designing A Sustainable Information Architecture for Resource-Constrained Organizations"
 title_zh: "【Tactics Tuesday】為資源受限的組織設計可持續的資訊架構"
 date: 2026-04-05
 categories: [governance, transformation, change-management, organizational-design]

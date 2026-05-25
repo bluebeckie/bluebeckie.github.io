@@ -1,6 +1,6 @@
 ---
 title: "Too Busy to Change?"
-title_en: "Too Busy to Change? What Employee Resistance Teaches Us About Change Management"
+title_en: "【Management Monday】Too Busy to Change? What Employee Resistance Teaches Us About Change Management"
 title_zh: "【Management Monday】當「窮忙」成為轉型的絆腳石：從員工抗拒看變革管理的技巧"
 date: 2026-02-02
 categories: [management, transformation, change-management]
