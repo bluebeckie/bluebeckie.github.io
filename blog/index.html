@@ -13,23 +13,31 @@ title: "Blog"
             {% for post in paginator.posts %}
             <article class="bg-white p-6 sm:p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
                 <a href="{{ post.url | relative_url }}" class="block">
-                    <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
-                        {{ post.title }}
-                    </h2>
+                    <div class="lang-en">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                            {{ post.title_en | default: post.title }}
+                        </h2>
+                    </div>
+                    <div class="lang-zh">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                            {{ post.title_zh | default: post.title }}
+                        </h2>
+                    </div>
                     <div class="flex items-center space-x-3 text-sm text-slate-500 mb-3">
                         <time datetime="{{ post.date | date_to_xmlschema }}">
                             {{ post.date | date: "%B %-d, %Y" }}
                         </time>
-                        {% if post.lang %}
-                        <span class="px-2 py-0.5 rounded-full border border-slate-300 text-xs"
-                              style="background-color: var(--color-light-sage);">
-                            {{ post.lang | upcase }}
-                        </span>
+                    </div>
+                    <div class="lang-en">
+                        {% if post.excerpt_en %}
+                        <p class="text-slate-600">{{ post.excerpt_en | truncatewords: 40 }}</p>
                         {% endif %}
                     </div>
-                    {% if post.excerpt %}
-                    <p class="text-slate-600">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-                    {% endif %}
+                    <div class="lang-zh">
+                        {% if post.excerpt_zh %}
+                        <p class="text-slate-600">{{ post.excerpt_zh | truncatewords: 40 }}</p>
+                        {% endif %}
+                    </div>
                 </a>
             </article>
             {% endfor %}

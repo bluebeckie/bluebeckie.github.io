@@ -1,10 +1,14 @@
 ---
-title: "安永雲端裸奔事件反思 | Reflection on Ernst & Young's Cloud Data Exposure"
+title: "Ernst & Young Azure Data Exposure"
+title_en: "Reflection on Ernst & Young's Cloud Data Exposure"
+title_zh: "安永雲端裸奔事件反思"
 date: 2025-11-05
-lang: zh
 categories: [governance]
-excerpt: "Ernst & Young 4TB 資料公開於 Azure 的事件反思：從治理面和管理面看雲端安全。"
+excerpt_en: "A reflection on the Ernst & Young 4TB Azure data exposure incident — lessons for governance and management."
+excerpt_zh: "Ernst & Young 4TB 資料公開於 Azure 的事件反思：從治理面和管理面看雲端安全。"
 ---
+
+<div class="lang-zh" markdown="1">
 
 ## 安永雲端裸奔事件反思
 
@@ -25,7 +29,9 @@ excerpt: "Ernst & Young 4TB 資料公開於 Azure 的事件反思：從治理面
 - 所有權限異動均需有 audit log 和通知，同時匯入 SIEM，即時監控。
 - 搭配 CSPM，即時監測及告警。
 
----
+</div>
+
+<div class="lang-en" markdown="1">
 
 ## Reflection on Ernst & Young's Incident
 
@@ -47,3 +53,5 @@ Here's my takeaway from this incident:
 - Implement environment policy with IaC to standardize default permission settings for each environment.
 - Set up access change audit log and notifications, make sure all change logs are ported into SIEM for real-time monitoring.
 - Deploy CSPM to actively monitor cloud assets and alert.
+
+</div>

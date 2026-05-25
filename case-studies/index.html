@@ -17,25 +17,35 @@ title: "Case Studies"
             {% for study in sorted_studies %}
             <article class="bg-white p-6 sm:p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
                 <a href="{{ study.url | relative_url }}" class="block">
-                    <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
-                        {{ study.title }}
-                    </h2>
-                    {% if study.subtitle %}
-                    <p class="text-slate-500 mb-2">{{ study.subtitle }}</p>
-                    {% endif %}
-                    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-3">
-                        {% if study.client %}<span>{{ study.client }}</span>{% endif %}
-                        {% if study.year %}<span>{{ study.year }}</span>{% endif %}
-                        {% if study.lang %}
-                        <span class="px-2 py-0.5 rounded-full border border-slate-300 text-xs"
-                              style="background-color: var(--color-light-sage);">
-                            {{ study.lang | upcase }}
-                        </span>
+                    <div class="lang-en">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                            {{ study.title_en | default: study.title }}
+                        </h2>
+                        {% if study.subtitle_en or study.subtitle %}
+                        <p class="text-slate-500 mb-2">{{ study.subtitle_en | default: study.subtitle }}</p>
                         {% endif %}
                     </div>
-                    {% if study.excerpt %}
-                    <p class="text-slate-600">{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
-                    {% endif %}
+                    <div class="lang-zh">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                            {{ study.title_zh | default: study.title }}
+                        </h2>
+                        {% if study.subtitle_zh or study.subtitle %}
+                        <p class="text-slate-500 mb-2">{{ study.subtitle_zh | default: study.subtitle }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-3">
+                        {% if study.year %}<span>{{ study.year }}</span>{% endif %}
+                    </div>
+                    <div class="lang-en">
+                        {% if study.excerpt_en %}
+                        <p class="text-slate-600">{{ study.excerpt_en | truncatewords: 30 }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="lang-zh">
+                        {% if study.excerpt_zh %}
+                        <p class="text-slate-600">{{ study.excerpt_zh | truncatewords: 30 }}</p>
+                        {% endif %}
+                    </div>
                 </a>
             </article>
             {% endfor %}

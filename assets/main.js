@@ -231,10 +231,18 @@ function updateContent() {
     let footerText = data.footerCopyright.replace('{year}', currentYear);
     setText('footer-copyright', footerText);
 
-    // 11. Update Language Toggle Visuals
+    // 12. Update Language Toggle Visuals
     getElement('lang-en').classList.remove('active');
     getElement('lang-zh').classList.remove('active');
     getElement(`lang-${currentLang}`).classList.add('active');
+
+    // 13. Toggle language-specific content blocks
+    document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = currentLang === 'en' ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-zh').forEach(el => {
+        el.style.display = currentLang === 'zh' ? '' : 'none';
+    });
 }
 
 function setLanguage(lang) {
