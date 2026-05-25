@@ -4,10 +4,10 @@ title: "Case Studies"
 ---
 <section class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
+        <h1 id="cs-listing-title" class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
             Case Studies
         </h1>
-        <p class="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
+        <p id="cs-listing-sub" class="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
             Real-world examples of strategic transformation and measurable business impact.
         </p>
 
@@ -41,7 +41,7 @@ title: "Case Studies"
             {% endfor %}
         </div>
         {% else %}
-        <p class="text-center text-slate-500 text-lg">Case studies coming soon.</p>
+        <p id="cs-listing-empty" class="text-center text-slate-500 text-lg">Case studies coming soon.</p>
         {% endif %}
     </div>
 </section>

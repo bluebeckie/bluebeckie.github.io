@@ -53,6 +53,11 @@ const content = {
             }
         ],
         viewAll: "View All Case Studies",
+        blogTitle: "Blog",
+        blogEmpty: "No posts yet. Check back soon.",
+        csListingTitle: "Case Studies",
+        csListingSub: "Real-world examples of strategic transformation and measurable business impact.",
+        csListingEmpty: "Case studies coming soon.",
         formName: "Name", formCompany: "Company", formEmail: "Email", formMessage: "Message", formSubmit: "Send Message",
         // Updated copyright text to use a {year} placeholder
         footerCopyright: "© {year} Beckie Fang. All rights reserved.",
@@ -101,6 +106,11 @@ const content = {
             }
         ],
         viewAll: "查看所有案例",
+        blogTitle: "部落格",
+        blogEmpty: "目前沒有文章，敬請期待。",
+        csListingTitle: "成果案例",
+        csListingSub: "策略性轉型與可衡量商業影響的真實案例。",
+        csListingEmpty: "案例即將上線。",
         formName: "姓名", formCompany: "公司", formEmail: "電子郵件", formMessage: "訊息", formSubmit: "發送訊息",
         // Updated copyright text to use a {year} placeholder
         footerCopyright: "© {year} Beckie 版權所有。",
@@ -210,7 +220,14 @@ function updateContent() {
     setText('form-message-label', data.formMessage);
     setText('form-submit-btn', data.formSubmit);
 
-    // 10. Update Footer
+    // 10. Update Blog & Case Studies Listing Pages
+    setText('blog-title', data.blogTitle);
+    setText('blog-empty', data.blogEmpty);
+    setText('cs-listing-title', data.csListingTitle);
+    setText('cs-listing-sub', data.csListingSub);
+    setText('cs-listing-empty', data.csListingEmpty);
+
+    // 11. Update Footer
     let footerText = data.footerCopyright.replace('{year}', currentYear);
     setText('footer-copyright', footerText);
 
