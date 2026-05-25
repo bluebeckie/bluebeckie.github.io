@@ -96,9 +96,9 @@ body {
     font-weight: 600;
 }
 
-/* Language toggle for content blocks — use body class for robust cascade */
-body:not(.is-zh) .lang-zh { display: none !important; }
-body.is-zh .lang-en { display: none !important; }
+/* Language toggle for content blocks — body class ensures high specificity */
+body:not(.is-zh) .lang-zh { display: none; }
+body.is-zh .lang-en { display: none; }
 
 /* Prose / Markdown Content Styles */
 .prose-content {
