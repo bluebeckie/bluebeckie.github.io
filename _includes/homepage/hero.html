@@ -1,0 +1,19 @@
+<section id="home" class="hero-with-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto mb-6 text-white leading-tight">
+            {{ include.t.hero.headline }}
+        </h1>
+        <p class="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto mb-10">
+            {{ include.t.hero.sub_headline }}
+        </p>
+        <div class="space-y-4">
+            <p class="text-slate-200 text-lg font-medium">
+                {{ include.t.hero.cta_prompt }}
+            </p>
+            <a href="{{ include.t.links.contact }}" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-medium rounded-xl btn-accent">
+                {{ include.t.hero.cta_button }}
+            </a>
+        </div>
+    </div>
+</section>

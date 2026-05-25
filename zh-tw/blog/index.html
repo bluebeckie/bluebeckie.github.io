@@ -1,19 +1,20 @@
 ---
 layout: default
-title: "Blog"
-lang: en
-zh_tw_url: /zh-tw/blog/
+title: "部落格"
+lang: zh-tw
+en_url: /blog/
 ---
-{% assign t = site.data.i18n.en %}
+{% assign t = site.data.i18n['zh-tw'] %}
 <section class="py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl sm:text-4xl font-bold mb-10 text-center" style="color: var(--color-navy);">
             {{ t.blog.title }}
         </h1>
 
-        {% if paginator.posts.size > 0 %}
+        {% assign zh_posts = site.zh_tw_posts | sort: "date" | reverse %}
+        {% if zh_posts.size > 0 %}
         <div class="space-y-8">
-            {% for post in paginator.posts %}
+            {% for post in zh_posts %}
             <article class="bg-white p-6 sm:p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
                 <a href="{{ post.url | relative_url }}" class="block">
                     <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
@@ -31,29 +32,6 @@ zh_tw_url: /zh-tw/blog/
             </article>
             {% endfor %}
         </div>
-
-        {% if paginator.total_pages > 1 %}
-        <nav class="flex justify-center space-x-4 mt-12">
-            {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | relative_url }}"
-               class="px-4 py-2 rounded-lg border text-sm font-medium"
-               style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
-                &larr; Newer
-            </a>
-            {% endif %}
-            <span class="px-4 py-2 text-sm text-slate-500">
-                Page {{ paginator.page }} of {{ paginator.total_pages }}
-            </span>
-            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | relative_url }}"
-               class="px-4 py-2 rounded-lg border text-sm font-medium"
-               style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
-                Older &rarr;
-            </a>
-            {% endif %}
-        </nav>
-        {% endif %}
-
         {% else %}
         <p class="text-center text-slate-500 text-lg">{{ t.blog.empty }}</p>
         {% endif %}

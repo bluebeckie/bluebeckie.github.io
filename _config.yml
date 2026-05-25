@@ -21,6 +21,12 @@ collections:
   case_studies:
     output: true
     permalink: /case-studies/:title/
+  zh_tw_posts:
+    output: true
+    permalink: /zh-tw/blog/:year/:month/:day/:title/
+  zh_tw_case_studies:
+    output: true
+    permalink: /zh-tw/case-studies/:title/
 
 defaults:
   - scope:
@@ -28,16 +34,31 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      lang: "en"
   - scope:
       path: ""
       type: "case_studies"
     values:
       layout: "case-study"
+      lang: "en"
+  - scope:
+      path: ""
+      type: "zh_tw_posts"
+    values:
+      layout: "post"
+      lang: "zh-tw"
+  - scope:
+      path: ""
+      type: "zh_tw_case_studies"
+    values:
+      layout: "case-study"
+      lang: "zh-tw"
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
+      lang: "en"
 
 paginate: 10
 paginate_path: "/blog/page:num/"
@@ -47,3 +68,4 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect-from
