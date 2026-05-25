@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Blog"
+---
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-10 text-center" style="color: var(--color-navy);">
+            Blog
+        </h1>
+
+        {% if paginator.posts.size > 0 %}
+        <div class="space-y-8">
+            {% for post in paginator.posts %}
+            <article class="bg-white p-6 sm:p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
+                <a href="{{ post.url | relative_url }}" class="block">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                        {{ post.title }}
+                    </h2>
+                    <div class="flex items-center space-x-3 text-sm text-slate-500 mb-3">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                        {% if post.lang %}
+                        <span class="px-2 py-0.5 rounded-full border border-slate-300 text-xs"
+                              style="background-color: var(--color-light-sage);">
+                            {{ post.lang | upcase }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% if post.excerpt %}
+                    <p class="text-slate-600">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                    {% endif %}
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if paginator.total_pages > 1 %}
+        <nav class="flex justify-center space-x-4 mt-12">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}"
+               class="px-4 py-2 rounded-lg border text-sm font-medium"
+               style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
+                &larr; Newer
+            </a>
+            {% endif %}
+            <span class="px-4 py-2 text-sm text-slate-500">
+                Page {{ paginator.page }} of {{ paginator.total_pages }}
+            </span>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}"
+               class="px-4 py-2 rounded-lg border text-sm font-medium"
+               style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
+                Older &rarr;
+            </a>
+            {% endif %}
+        </nav>
+        {% endif %}
+
+        {% else %}
+        <p class="text-center text-slate-500 text-lg">No posts yet. Check back soon.</p>
+        {% endif %}
+    </div>
+</section>

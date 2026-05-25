@@ -10,7 +10,7 @@ const metaDesc = {
 
 const content = {
     en: {
-        home: "Home", expertise: "Expertise", caseStudies: "Case Studies", contact: "Contact",
+        home: "Home", expertise: "Expertise", caseStudies: "Case Studies", blog: "Blog", contact: "Contact",
         headline: "Visionary Leadership for AI-Powered Business Acceleration and Sustainable Growth.",
         subHeadline: "Strategically incorporating new technologies, like AI, to accelerate business goals (cost reduction) and cultivate the growth mindset necessary for enduring cultural transformation.",
         ctaButton: "Get in Touch",
@@ -58,7 +58,7 @@ const content = {
         footerCopyright: "© {year} Beckie Fang. All rights reserved.",
     },
     zh: {
-        home: "首頁", expertise: "專業領域", caseStudies: "成果案例", contact: "聯繫洽談",
+        home: "首頁", expertise: "專業領域", caseStudies: "成果案例", blog: "部落格", contact: "聯繫洽談",
         headline: "願景領導力：驅動 AI 商業加速與永續成長",
         subHeadline: "策略性地整合 AI 等新技術，加速業務目標達成（成本縮減），並培養實現持久文化轉型的成長思維。",
         ctaButton: "聯繫洽談",
@@ -128,6 +128,16 @@ function getElements(selector) {
     return domCache[selector];
 }
 
+// Null-safe helpers for multi-page support
+function setText(id, text) {
+    const el = getElement(id);
+    if (el) el.textContent = text;
+}
+function setHtml(id, html) {
+    const el = getElement(id);
+    if (el) el.innerHTML = html;
+}
+
 // Function to set document language attributes and content based on currentLang
 function updateContent() {
     const data = content[currentLang];
@@ -138,20 +148,21 @@ function updateContent() {
     if (!domCache.metaDesc) {
         domCache.metaDesc = document.querySelector('meta[name="description"]');
     }
-    domCache.metaDesc.setAttribute('content', metaDesc[currentLang]);
+    if (domCache.metaDesc) domCache.metaDesc.setAttribute('content', metaDesc[currentLang]);
     document.documentElement.lang = currentLang;
 
     // 2. Update Navigation
-    getElement('nav-home').textContent = data.home;
-    getElement('nav-expertise').textContent = data.expertise;
-    getElement('nav-caseStudies').textContent = data.caseStudies;
-    getElement('nav-contact').textContent = data.contact;
+    setText('nav-home', data.home);
+    setText('nav-expertise', data.expertise);
+    setText('nav-caseStudies', data.caseStudies);
+    setText('nav-blog', data.blog);
+    setText('nav-contact', data.contact);
 
     // 3. Update Hero Section
-    getElement('h1-headline').textContent = data.headline;
-    getElement('sub-headline').textContent = data.subHeadline;
-    getElement('cta-button').textContent = data.ctaButton;
-    getElement('cta-prompt').textContent = data.ctaPrompt;
+    setText('h1-headline', data.headline);
+    setText('sub-headline', data.subHeadline);
+    setText('cta-button', data.ctaButton);
+    setText('cta-prompt', data.ctaPrompt);
 
     // 4. Update Proof Points
     const ppTitles = getElements('[data-proof-title]');
@@ -162,8 +173,8 @@ function updateContent() {
     });
 
     // 5. Update About Section
-    getElement('about-title').textContent = data.aboutTitle;
-    getElement('about-body').textContent = data.aboutBody;
+    setText('about-title', data.aboutTitle);
+    setText('about-body', data.aboutBody);
 
     // 6. Update Key Credentials List
     const keyCredElements = getElements('[data-credential]');
@@ -172,36 +183,36 @@ function updateContent() {
     });
 
     // 6b. Update Key Credentials Title
-    getElement('key-credentials-title').textContent = data.keyCredentialsTitle;
+    setText('key-credentials-title', data.keyCredentialsTitle);
 
     // 7. Update Case Study
-    getElement('cs-title').textContent = data.caseStudyTitle;
-    getElement('cs-sub').textContent = data.caseStudySub;
-    getElement('cs-metric-label').textContent = data.caseStudyMetricLabel;
-    getElement('cs-metric-description').textContent = data.caseStudyMetricDescription;
-    getElement('cs-view-all').textContent = data.viewAll;
+    setText('cs-title', data.caseStudyTitle);
+    setText('cs-sub', data.caseStudySub);
+    setText('cs-metric-label', data.caseStudyMetricLabel);
+    setText('cs-metric-description', data.caseStudyMetricDescription);
+    setText('cs-view-all', data.viewAll);
 
     // 8. Update Case Study Details
     const csDetails = data.caseStudyDetails;
-    getElement('cs-detail-1-title').textContent = csDetails[0].title;
-    getElement('cs-detail-1-body').innerHTML = csDetails[0].body;
-    getElement('cs-detail-2-title').textContent = csDetails[1].title;
-    getElement('cs-detail-2-body').innerHTML = csDetails[1].body;
-    getElement('cs-detail-3-title').textContent = csDetails[2].title;
-    getElement('cs-detail-3-body').innerHTML = csDetails[2].body;
+    setText('cs-detail-1-title', csDetails[0].title);
+    setHtml('cs-detail-1-body', csDetails[0].body);
+    setText('cs-detail-2-title', csDetails[1].title);
+    setHtml('cs-detail-2-body', csDetails[1].body);
+    setText('cs-detail-3-title', csDetails[2].title);
+    setHtml('cs-detail-3-body', csDetails[2].body);
 
     // 9. Update Contact Form
-    getElement('cta-prompt-contact').textContent = data.ctaContact;
-    getElement('contact-description').textContent = data.contactDescription;
-    getElement('form-name-label').textContent = data.formName;
-    getElement('form-company-label').textContent = data.formCompany;
-    getElement('form-email-label').textContent = data.formEmail;
-    getElement('form-message-label').textContent = data.formMessage;
-    getElement('form-submit-btn').textContent = data.formSubmit;
+    setText('cta-prompt-contact', data.ctaContact);
+    setText('contact-description', data.contactDescription);
+    setText('form-name-label', data.formName);
+    setText('form-company-label', data.formCompany);
+    setText('form-email-label', data.formEmail);
+    setText('form-message-label', data.formMessage);
+    setText('form-submit-btn', data.formSubmit);
 
     // 10. Update Footer
     let footerText = data.footerCopyright.replace('{year}', currentYear);
-    getElement('footer-copyright').textContent = footerText;
+    setText('footer-copyright', footerText);
 
     // 11. Update Language Toggle Visuals
     getElement('lang-en').classList.remove('active');

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<article class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="mb-10">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-navy);">
+                {{ page.title }}
+            </h1>
+            {% if page.subtitle %}
+            <p class="text-xl text-slate-600">{{ page.subtitle }}</p>
+            {% endif %}
+            <div class="flex flex-wrap items-center gap-3 mt-4 text-sm text-slate-500">
+                {% if page.client %}
+                <span>Client: {{ page.client }}</span>
+                {% endif %}
+                {% if page.year %}
+                <span>Year: {{ page.year }}</span>
+                {% endif %}
+                {% if page.lang %}
+                <span class="px-2 py-0.5 rounded-full border border-slate-300 text-xs"
+                      style="background-color: var(--color-light-sage);">
+                    {{ page.lang | upcase }}
+                </span>
+                {% endif %}
+            </div>
+        </header>
+
+        {% if page.metrics %}
+        <div class="grid grid-cols-1 md:grid-cols-{{ page.metrics.size }} gap-6 mb-12">
+            {% for metric in page.metrics %}
+            <div class="metric-box p-6 text-center">
+                <div class="text-4xl font-extrabold text-peach-accent mb-1">{{ metric.value }}</div>
+                <div class="text-sm text-slate-600">{{ metric.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="prose-content">
+            {{ content }}
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-slate-200">
+            <a href="{{ '/case-studies/' | relative_url }}" class="text-sm font-medium hover:underline"
+               style="color: var(--color-dusty-teal);">
+                &larr; All Case Studies
+            </a>
+        </div>
+    </div>
+</article>

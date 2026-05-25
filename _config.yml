@@ -1,0 +1,49 @@
+title: "Beckie Fang | AI & Digital Transformation Consultant"
+description: "Senior consultant specializing in corporate AI strategy, digital transformation, and executive advisory."
+url: "https://beckiefang.com"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - src/
+  - node_modules/
+  - .DS_Store
+
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: "case-study"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
