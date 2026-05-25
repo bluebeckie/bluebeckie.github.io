@@ -1,0 +1,20 @@
+<header class="sticky top-0 z-50 bg-navy-section shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="{{ '/' | relative_url }}" class="text-xl font-bold text-white tracking-wider">
+            <span id="brand-name">Beckie Fang</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+            <a id="nav-home" href="{{ '/' | relative_url }}#home" class="text-white hover:text-light-sage transition">Home</a>
+            <a id="nav-expertise" href="{{ '/' | relative_url }}#expertise" class="text-white hover:text-light-sage transition">Expertise</a>
+            <a id="nav-caseStudies" href="{{ '/case-studies/' | relative_url }}" class="text-white hover:text-light-sage transition">Case Studies</a>
+            <a id="nav-blog" href="{{ '/blog/' | relative_url }}" class="text-white hover:text-light-sage transition">Blog</a>
+            <a id="nav-contact" href="{{ '/' | relative_url }}#contact" class="text-white hover:text-light-sage transition">Contact</a>
+        </nav>
+
+        <div class="lang-switch flex">
+            <button id="lang-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+            <button id="lang-zh" class="lang-btn" onclick="setLanguage('zh')">中文</button>
+        </div>
+    </div>
+</header>

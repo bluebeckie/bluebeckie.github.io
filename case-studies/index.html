@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Case Studies"
+---
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
+            Case Studies
+        </h1>
+        <p class="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
+            Real-world examples of strategic transformation and measurable business impact.
+        </p>
+
+        {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}
+        {% if sorted_studies.size > 0 %}
+        <div class="space-y-8">
+            {% for study in sorted_studies %}
+            <article class="bg-white p-6 sm:p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
+                <a href="{{ study.url | relative_url }}" class="block">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color: var(--color-navy);">
+                        {{ study.title }}
+                    </h2>
+                    {% if study.subtitle %}
+                    <p class="text-slate-500 mb-2">{{ study.subtitle }}</p>
+                    {% endif %}
+                    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 mb-3">
+                        {% if study.client %}<span>{{ study.client }}</span>{% endif %}
+                        {% if study.year %}<span>{{ study.year }}</span>{% endif %}
+                        {% if study.lang %}
+                        <span class="px-2 py-0.5 rounded-full border border-slate-300 text-xs"
+                              style="background-color: var(--color-light-sage);">
+                            {{ study.lang | upcase }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    {% if study.excerpt %}
+                    <p class="text-slate-600">{{ study.excerpt | strip_html | truncatewords: 30 }}</p>
+                    {% endif %}
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-center text-slate-500 text-lg">Case studies coming soon.</p>
+        {% endif %}
+    </div>
+</section>
