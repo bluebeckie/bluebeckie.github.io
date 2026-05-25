@@ -236,13 +236,8 @@ function updateContent() {
     getElement('lang-zh').classList.remove('active');
     getElement(`lang-${currentLang}`).classList.add('active');
 
-    // 13. Toggle language-specific content blocks
-    document.querySelectorAll('.lang-en').forEach(el => {
-        el.style.display = currentLang === 'en' ? '' : 'none';
-    });
-    document.querySelectorAll('.lang-zh').forEach(el => {
-        el.style.display = currentLang === 'zh' ? '' : 'none';
-    });
+    // 13. Toggle language-specific content blocks via body class
+    document.body.classList.toggle('is-zh', currentLang === 'zh');
 }
 
 function setLanguage(lang) {
