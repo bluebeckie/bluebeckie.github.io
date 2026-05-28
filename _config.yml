@@ -3,6 +3,9 @@ description: "Senior consultant specializing in corporate AI strategy, digital t
 url: "https://beckiefang.com"
 baseurl: ""
 
+# Cloudflare Web Analytics (cookieless, no consent banner needed)
+cloudflare_beacon: "4b9a1bef5f154aa5bbefc091ab6a0902"
+
 markdown: kramdown
 kramdown:
   input: GFM
