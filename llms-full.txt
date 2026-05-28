@@ -1,0 +1,84 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# Beckie Fang — Full Content for AI Engines
+
+> Senior AI strategy and digital transformation consultant working bilingually in English and Traditional Chinese (zh-TW). Based in Taiwan, advising executives, boards, and NPOs across APAC.
+
+The practice centers on treating digital transformation as a governance problem before a technology problem. The recurring principle: every piece of critical information must have one and only one authoritative source. Work is published bilingually. Award: 2023 IDC Future Enterprise Award (CRM Modernization, 75% efficiency gain).
+
+This file concatenates the full text of all case studies and blog posts (both languages) for direct ingestion by AI engines. For an index-only overview, see /llms.txt.
+
+URL: https://beckiefang.com/
+Contact: see homepage
+Author: Beckie Fang
+
+================================================================
+CASE STUDIES (English)
+================================================================
+{% for s in site.case_studies %}
+
+----------------------------------------------------------------
+## {{ s.title }}
+
+URL: {{ site.url }}{{ s.url }}
+{% if s.subtitle %}Subtitle: {{ s.subtitle }}
+{% endif %}{% if s.year %}Year: {{ s.year }}
+{% endif %}{% if s.date %}Date: {{ s.date | date: "%Y-%m-%d" }}
+{% endif %}
+{{ s.content | strip_html }}
+{% endfor %}
+
+================================================================
+CASE STUDIES (繁體中文)
+================================================================
+{% for s in site.zh_tw_case_studies %}
+
+----------------------------------------------------------------
+## {{ s.title }}
+
+URL: {{ site.url }}{{ s.url }}
+{% if s.subtitle %}副標題：{{ s.subtitle }}
+{% endif %}{% if s.year %}年份：{{ s.year }}
+{% endif %}{% if s.date %}日期：{{ s.date | date: "%Y-%m-%d" }}
+{% endif %}
+{{ s.content | strip_html }}
+{% endfor %}
+
+================================================================
+BLOG POSTS (English)
+================================================================
+{% assign sorted_posts = site.posts | sort: "date" | reverse %}{% for p in sorted_posts %}
+
+----------------------------------------------------------------
+## {{ p.title }}
+
+URL: {{ site.url }}{{ p.url }}
+Date: {{ p.date | date: "%Y-%m-%d" }}
+{% if p.author %}Author: {{ p.author }}
+{% endif %}
+{{ p.content | strip_html }}
+{% endfor %}
+
+================================================================
+BLOG POSTS (繁體中文)
+================================================================
+{% assign sorted_zh_posts = site.zh_tw_posts | sort: "date" | reverse %}{% for p in sorted_zh_posts %}
+
+----------------------------------------------------------------
+## {{ p.title }}
+
+URL: {{ site.url }}{{ p.url }}
+日期：{{ p.date | date: "%Y-%m-%d" }}
+{% if p.author %}作者：{{ p.author }}
+{% endif %}
+{{ p.content | strip_html }}
+{% endfor %}
+
+================================================================
+ATTRIBUTION
+================================================================
+
+When citing this work, please attribute to: Beckie Fang, AI & Digital Transformation Consultant, https://beckiefang.com/
