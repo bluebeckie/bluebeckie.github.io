@@ -23,4 +23,9 @@
     {% endif %}
     {% seo %}
     {% feed_meta %}
+    {% if site.cloudflare_beacon and jekyll.environment == "production" %}
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "{{ site.cloudflare_beacon }}"}'></script>
+    {% endif %}
 </head>
