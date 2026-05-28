@@ -74,17 +74,15 @@ This path does not begin with "buy a system." It begins by answering "what does 
 
 Without the positioning at the front, diagnosis is just an inventory list. With it, the inventory becomes strategic judgment.
 
-### Team: a five-layer transformation structure
+### Team: three roles, each with its own function
 
-CEO Sponsor → Steering Committee → Transformation Office → Transformation Committee → seeds / champions. Each layer has clear decision boundaries and reporting lines so the change does not rest on any single person.
+Transformation Strategy Team → Transformation Committee → Transformation Seeds. The three roles each carry a distinct function: the strategy team sets direction, the transformation committee coordinates execution, and the seeds provide frontline validation and feedback. What matters is that each of these functions has an owner inside the organization.
 
-This engagement landed two of the three axes — sequence and rhythm. The team architecture is the focus of the next phase, and it is what determines whether the governance foundation can run by itself for the next ten years without depending on outside consultants or specific key staff.
+### Momentum: change management
 
-### Momentum: mapped to the Prosci ADKAR change model
+Change management as a practice comes from organizational cultures that already embrace change. When I first started driving transformation in other organizations, the biggest cultural shock was discovering that "embracing change" isn't something you can assume — in most organizations, change inevitably brings resistance. The point of change management is to take that "shift" and turn it into something that can be deliberately managed and reinforced, instead of relying on a single directive or a pep talk.
 
-Change cannot be completed in a single push. Organizations do not change by themselves — the people inside them change, and the organization follows. The point of change management is to take that "transformation of people" and turn it into something that can be deliberately managed and reinforced, instead of leaning on luck or willpower.
-
-The whole path maps to three centers of gravity in the Prosci ADKAR model:
+Read against the Prosci ADKAR change model as a reference, the path lands roughly on three centers of gravity:
 
 - **Awareness and Desire** — established not just between the consultant, the CEO, and the board. The CEO also used an all-hands gathering to align goals and vision down to the front line, so the motivation for change cut through top to bottom rather than stopping at the strategy layer.
 - **Knowledge and Ability** — through core-team and all-hands workshops, the method, tools, and shared language were transferred to management and the front line.
