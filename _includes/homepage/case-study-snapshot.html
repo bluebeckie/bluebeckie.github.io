@@ -1,0 +1,40 @@
+{% assign t = include.t %}
+{% assign lang = include.lang | default: "en" %}
+<section id="results" class="py-24 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center" style="color: var(--color-navy);">
+            {{ t.featured_case_study.title }}
+        </h2>
+        <p class="text-xl text-slate-600 mb-12 text-center max-w-3xl mx-auto">
+            {{ t.featured_case_study.subtitle }}
+        </p>
+
+        <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl border border-slate-200">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1 border-r border-slate-200 lg:pr-8">
+                    <p class="text-xl font-medium text-slate-500 uppercase tracking-wider mb-2">{{ t.featured_case_study.metric_label }}</p>
+                    <p class="text-6xl sm:text-7xl font-extrabold text-peach-accent">75%</p>
+                    <p class="text-lg text-slate-600 mt-2">{{ t.featured_case_study.metric_description }}</p>
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    {% for detail in t.featured_case_study.details %}
+                    <div class="flex items-start space-x-4">
+                        <span class="font-bold text-xl mt-1" style="color: var(--color-dusty-teal);">&#10003;</span>
+                        <div>
+                            <h3 class="text-xl font-semibold" style="color: var(--color-navy);">{{ detail.title }}</h3>
+                            <p class="text-slate-700">{{ detail.body }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="{{ t.links.case_studies | relative_url }}" class="inline-flex items-center justify-center px-6 py-2 border text-base font-medium rounded-xl hover:bg-slate-200 transition"
+               style="border-color: var(--color-dusty-teal); color: var(--color-navy);">
+                {{ t.featured_case_study.view_all }}
+            </a>
+        </div>
+    </div>
+</section>

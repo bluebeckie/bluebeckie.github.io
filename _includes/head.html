@@ -1,3 +1,5 @@
+{% assign lang = include.lang | default: "en" %}
+{% assign t = include.t %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,6 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+    {% if page.ref %}
+    {% if lang == "en" %}
+    {% assign alt_post = site.zh_tw_posts | where: "ref", page.ref | first %}
+    {% unless alt_post %}{% assign alt_post = site.zh_tw_case_studies | where: "ref", page.ref | first %}{% endunless %}
+    {% if alt_post %}<link rel="alternate" hreflang="zh-Hant-TW" href="{{ alt_post.url | absolute_url }}">{% endif %}
+    <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+    {% else %}
+    {% assign alt_post = site.posts | where: "ref", page.ref | first %}
+    {% unless alt_post %}{% assign alt_post = site.case_studies | where: "ref", page.ref | first %}{% endunless %}
+    {% if alt_post %}<link rel="alternate" hreflang="en" href="{{ alt_post.url | absolute_url }}">{% endif %}
+    <link rel="alternate" hreflang="zh-Hant-TW" href="{{ page.url | absolute_url }}">
+    {% endif %}
+    {% endif %}
     {% seo %}
     {% feed_meta %}
 </head>

@@ -1,0 +1,26 @@
+{% assign lang = include.lang | default: "en" %}
+<div class="lang-switch flex">
+{% if lang == "en" %}
+  <span class="lang-btn active">EN</span>
+  {% if page.ref %}
+    {% assign zh_page = site.zh_tw_posts | where: "ref", page.ref | first %}
+    {% unless zh_page %}{% assign zh_page = site.zh_tw_case_studies | where: "ref", page.ref | first %}{% endunless %}
+    <a href="{{ zh_page.url | default: '/zh-tw/' | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','zh-tw')">中文</a>
+  {% elsif page.zh_tw_url %}
+    <a href="{{ page.zh_tw_url | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','zh-tw')">中文</a>
+  {% else %}
+    <a href="{{ '/zh-tw/' | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','zh-tw')">中文</a>
+  {% endif %}
+{% else %}
+  {% if page.ref %}
+    {% assign en_page = site.posts | where: "ref", page.ref | first %}
+    {% unless en_page %}{% assign en_page = site.case_studies | where: "ref", page.ref | first %}{% endunless %}
+    <a href="{{ en_page.url | default: '/' | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','en')">EN</a>
+  {% elsif page.en_url %}
+    <a href="{{ page.en_url | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','en')">EN</a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}" class="lang-btn" onclick="localStorage.setItem('beckie_lang','en')">EN</a>
+  {% endif %}
+  <span class="lang-btn active">中文</span>
+{% endif %}
+</div>

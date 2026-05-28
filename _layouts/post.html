@@ -1,19 +1,14 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 <article class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <header class="mb-10">
-            <div class="lang-en">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-navy);">
-                    {{ page.title_en | default: page.title }}
-                </h1>
-            </div>
-            <div class="lang-zh">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-navy);">
-                    {{ page.title_zh | default: page.title }}
-                </h1>
-            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-navy);">
+                {{ page.title }}
+            </h1>
             <div class="flex items-center space-x-4 text-sm text-slate-500">
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date: "%B %-d, %Y" }}
@@ -22,6 +17,19 @@ layout: default
                 <span>{{ page.categories | join: ", " }}</span>
                 {% endif %}
             </div>
+            {% if page.ref %}
+            {% if lang == "en" %}
+            {% assign alt = site.zh_tw_posts | where: "ref", page.ref | first %}
+            {% if alt %}
+            <a href="{{ alt.url | relative_url }}" class="text-sm mt-2 inline-block" style="color: var(--color-dusty-teal);">閱讀中文版</a>
+            {% endif %}
+            {% else %}
+            {% assign alt = site.posts | where: "ref", page.ref | first %}
+            {% if alt %}
+            <a href="{{ alt.url | relative_url }}" class="text-sm mt-2 inline-block" style="color: var(--color-dusty-teal);">Read in English</a>
+            {% endif %}
+            {% endif %}
+            {% endif %}
         </header>
 
         <div class="prose-content">
@@ -29,9 +37,9 @@ layout: default
         </div>
 
         <div class="mt-12 pt-6 border-t border-slate-200">
-            <a href="{{ '/blog/' | relative_url }}" class="text-sm font-medium hover:underline"
+            <a href="{{ t.links.blog | relative_url }}" class="text-sm font-medium hover:underline"
                style="color: var(--color-dusty-teal);">
-                &larr; Back to Blog
+                &larr; {{ t.blog.back }}
             </a>
         </div>
     </div>

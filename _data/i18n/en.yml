@@ -1,0 +1,79 @@
+nav:
+  home: "Home"
+  expertise: "Expertise"
+  case_studies: "Case Studies"
+  blog: "Blog"
+  contact: "Contact"
+
+links:
+  home: "/"
+  case_studies: "/case-studies/"
+  blog: "/blog/"
+  contact: "/#contact"
+
+footer:
+  copyright: "Beckie Fang. All rights reserved."
+
+blog:
+  title: "Blog"
+  empty: "No posts yet. Check back soon."
+  back: "Back to Blog"
+  read_zh: "閱讀中文版"
+
+case_studies_listing:
+  title: "Case Studies"
+  subtitle: "Real-world examples of strategic transformation and measurable business impact."
+  empty: "Case studies coming soon."
+  back: "All Case Studies"
+  read_zh: "閱讀中文版"
+
+hero:
+  headline: "Visionary Leadership for AI-Powered Business Acceleration and Sustainable Growth."
+  sub_headline: "Strategically incorporating new technologies, like AI, to accelerate business goals (cost reduction) and cultivate the growth mindset necessary for enduring cultural transformation."
+  cta_button: "Get in Touch"
+  cta_prompt: "Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory."
+
+proof_points:
+  - value: "75%"
+    title: "AI & Cost Reduction"
+    text: "Reduced human work for critical processes by 75% (from 4 months to 1 month) through digital workflow and AI-powered automation."
+  - value: "IDC"
+    title: "Digital Transformation"
+    text: "Led legacy CRM to cloud-native microservices migration, winning the 2023 IDC Future Enterprise Award."
+  - value: "Agile"
+    title: "Strategic Governance"
+    text: "Established enterprise-wide Agile operating models and standardized SDLC frameworks."
+
+about:
+  title: "From Technical Mastery to Corporate Transformation."
+  body: "My career arc began with deep technical mastery in essential domains like front-end development, SEO, and web performance optimization. This foundation rapidly evolved into full-stack development ecosystem ownership, where I led high-impact, global initiatives such as major platform rebranding deliveries with zero downtime. I have since strategically expanded my focus to the corporate transformation ecosystem, leading enterprises through successful digital transformations, establishing enterprise-wide Agile operating models, and leveraging new technology, including AI, for business acceleration, security, and efficiency."
+  credentials_title: "Key Credentials"
+  credentials:
+    - "2023 IDC Future Enterprise Award"
+    - "AI & Gemini Skill Badges (Google)"
+    - "Certified ScrumMaster (CSM)"
+    - "Microsoft Certified: Azure Fundamentals (AZ-900)"
+
+featured_case_study:
+  title: "Featured Case Study: Award-Winning CRM Modernization"
+  subtitle: "A strategic transformation from monolithic legacy systems to a cloud-native microservices ecosystem."
+  metric_label: "Efficiency Gain"
+  metric_description: "Reduction in human work for critical processes (4 months down to 1 month)."
+  details:
+    - title: "Challenge: Operational Bottlenecks"
+      body: "Four months of human work was required for key organizational processes, hindering agility and creating high labor costs within a rigid, legacy monolithic CRM."
+    - title: "Solution: Visionary Transformation"
+      body: "Led the complete pivot to a cloud-native microservices ecosystem on D365, complemented by redesigned digital workflows and robust automation."
+    - title: "Impact: Industry Validation & ROI"
+      body: "Resulted in a validated **75% efficiency gain** and industry recognition by winning the **2023 IDC Future Enterprise Award**, proving successful strategic execution and measurable ROI."
+  view_all: "View All Case Studies"
+
+contact:
+  title: "Let's Discuss Your Next Transformation."
+  description: "Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory."
+  form:
+    name: "Name"
+    company: "Company"
+    email: "Email"
+    message: "Message"
+    submit: "Send Message"

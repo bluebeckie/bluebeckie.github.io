@@ -1,0 +1,79 @@
+nav:
+  home: "首頁"
+  expertise: "專業領域"
+  case_studies: "成果案例"
+  blog: "部落格"
+  contact: "聯繫洽談"
+
+links:
+  home: "/zh-tw/"
+  case_studies: "/zh-tw/case-studies/"
+  blog: "/zh-tw/blog/"
+  contact: "/zh-tw/#contact"
+
+footer:
+  copyright: "Beckie 版權所有。"
+
+blog:
+  title: "部落格"
+  empty: "目前沒有文章，敬請期待。"
+  back: "返回部落格"
+  read_en: "Read in English"
+
+case_studies_listing:
+  title: "成果案例"
+  subtitle: "策略性轉型與可衡量商業影響的真實案例。"
+  empty: "案例即將上線。"
+  back: "所有案例"
+  read_en: "Read in English"
+
+hero:
+  headline: "願景領導力：驅動 AI 商業加速與永續成長"
+  sub_headline: "策略性地整合 AI 等新技術，加速業務目標達成（成本縮減），並培養實現持久文化轉型的成長思維。"
+  cta_button: "聯繫洽談"
+  cta_prompt: "開啟關於企業 AI 策略、數位轉型或高階諮詢的對話。"
+
+proof_points:
+  - value: "75%"
+    title: "AI 與成本縮減"
+    text: "透過數位工作流程和 AI 賦能的自動化，將關鍵流程所需的人工工時減少 75%（從 4 個月縮短至 1 個月）。"
+  - value: "IDC"
+    title: "數位轉型成就"
+    text: "主導舊有 CRM 系統轉換為雲原生微服務，榮獲 2023 IDC 未來企業大獎。"
+  - value: "Agile"
+    title: "策略治理"
+    text: "建立企業級敏捷運營模式和標準化 SDLC 框架，整合團隊、流程和目標。"
+
+about:
+  title: "從技術專精到企業轉型。"
+  body: "我的職涯始於前端開發、SEO 和網頁性能優化等關鍵領域的深厚技術專精。此基礎迅速發展為全端開發生態系統的所有權，主導了諸如重要平台品牌重塑等高影響力、零停機的全球性專案。此後，我策略性地將重心擴展到企業轉型生態系統，引導企業成功實施數位轉型、建立企業級敏捷運營模式，並利用包括 AI 在內的新技術來加速業務、確保安全與提升效率。"
+  credentials_title: "專業認證"
+  credentials:
+    - "2023 IDC 未來企業大獎 (Future Enterprise Award)"
+    - "AI 與 Gemini 技能徽章 (Google)"
+    - "認證 Scrum Master (CSM)"
+    - "Microsoft 認證：Azure 基礎知識 (AZ-900)"
+
+featured_case_study:
+  title: "精選案例：獲獎的 CRM 現代化專案"
+  subtitle: "一項從單體式遺留系統到雲原生微服務生態系統的策略性轉型。"
+  metric_label: "效率提升"
+  metric_description: "關鍵流程人力縮減 75% - 從 4 個月到 1 個月。"
+  details:
+    - title: "挑戰：營運瓶頸"
+      body: "關鍵組織流程需耗費四個月的人工工時，降低敏捷性，並在僵化的傳統單體式 CRM 中造成高昂的人力成本。"
+    - title: "解決方案：前瞻性轉型"
+      body: "主導全面轉向 D365 雲原生微服務生態系統，輔以重新設計的數位工作流程和強大的自動化。"
+    - title: "影響：產業驗證與投資回報"
+      body: "實現了經驗證的 **75% 效率提升**，並透過贏得 **2023 IDC 未來企業大獎** 獲得業界認可，證明了成功的策略執行與可衡量的投資回報。"
+  view_all: "查看所有案例"
+
+contact:
+  title: "討論您的下一波轉型策略。"
+  description: "開啟關於企業 AI 策略、數位轉型或高階諮詢的對話。"
+  form:
+    name: "姓名"
+    company: "公司"
+    email: "電子郵件"
+    message: "訊息"
+    submit: "發送訊息"

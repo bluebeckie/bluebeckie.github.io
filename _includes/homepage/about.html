@@ -1,0 +1,26 @@
+<section id="expertise" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+        <div class="lg:col-span-1 flex justify-center">
+            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 shadow-xl overflow-hidden"
+                 style="border-color: var(--color-dusty-teal);">
+                <img src="{{ '/assets/transform-thumb.png' | relative_url }}" alt="Beckie Fang - AI & Digital Transformation Consultant" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="lg:col-span-2">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6" style="color: var(--color-navy);">
+                {{ include.t.about.title }}
+            </h2>
+            <p class="text-lg text-slate-700 leading-relaxed">
+                {{ include.t.about.body }}
+            </p>
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4" style="color: var(--color-dusty-teal);">{{ include.t.about.credentials_title }}</h3>
+                <ul class="flex flex-wrap gap-4 text-sm text-slate-600">
+                    {% for cred in include.t.about.credentials %}
+                    <li class="px-3 py-1 rounded-full border border-slate-300" style="background-color: var(--color-light-sage);">{{ cred }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
