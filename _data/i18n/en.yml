@@ -34,6 +34,7 @@ hero:
   cta_button: "Get in Touch"
   cta_prompt: "Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory."
 
+proof_points_heading: "Track record"
 proof_points:
   - value: "75%"
     title: "AI & Cost Reduction"

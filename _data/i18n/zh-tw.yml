@@ -34,6 +34,7 @@ hero:
   cta_button: "聯繫洽談"
   cta_prompt: "開啟關於企業 AI 策略、數位轉型或高階諮詢的對話。"
 
+proof_points_heading: "成果紀錄"
 proof_points:
   - value: "75%"
     title: "AI 與成本縮減"

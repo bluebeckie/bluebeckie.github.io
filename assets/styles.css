@@ -71,9 +71,16 @@ body {
     transform: translateY(-4px);
 }
 
-/* Color for the metrics text */
+/* Metric numbers — navy for WCAG AA contrast on white (peach was ~1.7:1, fails AA) */
 .text-peach-accent {
-    color: var(--color-peach);
+    color: var(--color-navy);
+}
+
+/* Keyboard-only focus ring — peach reads on both white and navy backgrounds */
+*:focus-visible {
+    outline: 2px solid var(--color-peach);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Custom classes for the language switch */
@@ -85,9 +92,12 @@ body {
 
 .lang-btn {
     padding: 0.35rem 0.75rem;
-    cursor: pointer;
     transition: background-color 0.3s;
     font-size: 0.875rem; /* text-sm */
+}
+
+a.lang-btn {
+    cursor: pointer;
 }
 
 .lang-btn.active {
