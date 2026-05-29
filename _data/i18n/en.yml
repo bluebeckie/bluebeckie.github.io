@@ -10,7 +10,7 @@ links:
   home: "/"
   case_studies: "/case-studies/"
   blog: "/blog/"
-  contact: "/#contact"
+  contact: "mailto:beckie@beckiefang.com"
 
 footer:
   copyright: "Beckie Fang. All rights reserved."
@@ -69,12 +69,3 @@ featured_case_study:
       body: "Resulted in a validated **75% efficiency gain** and industry recognition by winning the **2023 IDC Future Enterprise Award**, proving successful strategic execution and measurable ROI."
   view_all: "View All Case Studies"
 
-contact:
-  title: "Let's Discuss Your Next Transformation."
-  description: "Initiate a confidential conversation about corporate AI strategy, digital transformation, or executive advisory."
-  form:
-    name: "Name"
-    company: "Company"
-    email: "Email"
-    message: "Message"
-    submit: "Send Message"

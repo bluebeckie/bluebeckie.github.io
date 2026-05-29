@@ -3,14 +3,8 @@ layout: default
 lang: en
 zh_tw_url: /zh-tw/
 ---
-<script>
-if (localStorage.getItem('beckie_lang') === 'zh-tw' && window.location.pathname === '/') {
-  window.location.replace('/zh-tw/');
-}
-</script>
 {% assign t = site.data.i18n.en %}
 {% include homepage/hero.html t=t %}
 {% include homepage/proof-points.html t=t %}
 {% include homepage/about.html t=t %}
 {% include homepage/case-study-snapshot.html t=t lang="en" %}
-{% include homepage/contact.html t=t %}
