@@ -3,6 +3,16 @@ description: "Senior consultant specializing in corporate AI strategy, digital t
 url: "https://beckiefang.com"
 baseurl: ""
 
+# jekyll-seo-tag enrichment (drives OG cards, Twitter cards, JSON-LD)
+author: Beckie Fang
+logo: /assets/favicon.png
+image: /assets/transform-thumb.png
+social:
+  name: Beckie Fang
+  links:
+    - https://www.linkedin.com/in/beckiefang/
+    - https://www.facebook.com/beckie.tech
+
 # Cloudflare Web Analytics (cookieless, no consent banner needed)
 cloudflare_beacon: "4b9a1bef5f154aa5bbefc091ab6a0902"
 
@@ -38,30 +48,35 @@ defaults:
     values:
       layout: "post"
       lang: "en"
+      image: /assets/transform-thumb.png
   - scope:
       path: ""
       type: "case_studies"
     values:
       layout: "case-study"
       lang: "en"
+      image: /assets/transform-thumb.png
   - scope:
       path: ""
       type: "zh_tw_posts"
     values:
       layout: "post"
       lang: "zh-tw"
+      image: /assets/transform-thumb.png
   - scope:
       path: ""
       type: "zh_tw_case_studies"
     values:
       layout: "case-study"
       lang: "zh-tw"
+      image: /assets/transform-thumb.png
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
       lang: "en"
+      image: /assets/transform-thumb.png
 
 paginate: 10
 paginate_path: "/blog/page:num/"
