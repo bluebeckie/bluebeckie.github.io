@@ -14,6 +14,30 @@
             <a href="{{ t.links.contact | relative_url }}" class="text-white hover:text-light-sage transition">{{ t.nav.contact }}</a>
         </nav>
 
-        {% include lang-switcher.html lang=lang %}
+        <div class="flex items-center gap-3">
+            {% include lang-switcher.html lang=lang %}
+
+            <button id="mobile-nav-toggle" type="button"
+                    class="md:hidden inline-flex items-center justify-center w-10 h-10 text-white hover:text-light-sage transition"
+                    aria-label="{{ t.nav.menu | default: 'Menu' }}"
+                    aria-controls="mobile-nav-panel" aria-expanded="false">
+                <svg id="mobile-nav-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                <svg id="mobile-nav-icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6" />
+                </svg>
+            </button>
+        </div>
     </div>
+
+    <nav id="mobile-nav-panel" class="hidden md:hidden border-t border-white/10 bg-navy-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-col">
+            <a href="{{ t.links.home | relative_url }}#home" class="block py-3 text-white hover:text-light-sage transition">{{ t.nav.home }}</a>
+            <a href="{{ t.links.home | relative_url }}#expertise" class="block py-3 text-white hover:text-light-sage transition">{{ t.nav.expertise }}</a>
+            <a href="{{ t.links.case_studies | relative_url }}" class="block py-3 text-white hover:text-light-sage transition">{{ t.nav.case_studies }}</a>
+            <a href="{{ t.links.blog | relative_url }}" class="block py-3 text-white hover:text-light-sage transition">{{ t.nav.blog }}</a>
+            <a href="{{ t.links.contact | relative_url }}" class="block py-3 text-white hover:text-light-sage transition">{{ t.nav.contact }}</a>
+        </div>
+    </nav>
 </header>
