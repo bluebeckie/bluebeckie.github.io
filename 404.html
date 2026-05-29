@@ -1,0 +1,43 @@
+---
+layout: default
+permalink: /404.html
+title: "Page not found · 找不到頁面"
+sitemap: false
+---
+{% assign t_en = site.data.i18n.en %}
+{% assign t_zh = site.data.i18n['zh-tw'] %}
+<section class="py-24 bg-white">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm font-mono text-slate-500 mb-4">404</p>
+
+        <div class="mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-navy);">
+                Page not found
+            </h1>
+            <p class="text-lg text-slate-600 mb-6">
+                The page you’re looking for doesn’t exist or has moved.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="{{ '/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_en.nav.home }}</a>
+                <a href="{{ '/case-studies/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_en.nav.case_studies }}</a>
+                <a href="{{ '/blog/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_en.nav.blog }}</a>
+            </div>
+        </div>
+
+        <hr class="border-slate-200 mb-12">
+
+        <div lang="zh-Hant-TW">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4" style="color: var(--color-navy);">
+                找不到頁面
+            </h2>
+            <p class="text-lg text-slate-600 mb-6">
+                您要找的頁面不存在或已被移動。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="{{ '/zh-tw/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_zh.nav.home }}</a>
+                <a href="{{ '/zh-tw/case-studies/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_zh.nav.case_studies }}</a>
+                <a href="{{ '/zh-tw/blog/' | relative_url }}" class="font-medium hover:underline" style="color: var(--color-dusty-teal);">{{ t_zh.nav.blog }}</a>
+            </div>
+        </div>
+    </div>
+</section>
