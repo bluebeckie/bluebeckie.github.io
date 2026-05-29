@@ -4,6 +4,7 @@ nav:
   case_studies: "成果案例"
   blog: "部落格"
   contact: "聯繫洽談"
+  menu: "選單"
 
 links:
   home: "/zh-tw/"

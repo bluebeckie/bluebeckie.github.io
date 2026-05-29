@@ -4,6 +4,7 @@ nav:
   case_studies: "Case Studies"
   blog: "Blog"
   contact: "Contact"
+  menu: "Menu"
 
 links:
   home: "/"
