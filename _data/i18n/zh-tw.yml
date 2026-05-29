@@ -10,7 +10,7 @@ links:
   home: "/zh-tw/"
   case_studies: "/zh-tw/case-studies/"
   blog: "/zh-tw/blog/"
-  contact: "/zh-tw/#contact"
+  contact: "mailto:beckie@beckiefang.com"
 
 footer:
   copyright: "Beckie 版權所有。"
@@ -69,12 +69,3 @@ featured_case_study:
       body: "實現了經驗證的 **75% 效率提升**，並透過贏得 **2023 IDC 未來企業大獎** 獲得業界認可，證明了成功的策略執行與可衡量的投資回報。"
   view_all: "查看所有案例"
 
-contact:
-  title: "討論您的下一波轉型策略。"
-  description: "開啟關於企業 AI 策略、數位轉型或高階諮詢的對話。"
-  form:
-    name: "姓名"
-    company: "公司"
-    email: "電子郵件"
-    message: "訊息"
-    submit: "發送訊息"
