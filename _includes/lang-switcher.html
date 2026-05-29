@@ -1,26 +1,26 @@
 {% assign lang = include.lang | default: "en" %}
-<div class="lang-switch flex">
+<div class="lang-switch flex" role="group" aria-label="Language">
 {% if lang == "en" %}
-  <span class="lang-btn active">EN</span>
+  <span class="lang-btn active" aria-current="true" lang="en">EN</span>
   {% if page.ref %}
     {% assign zh_page = site.zh_tw_posts | where: "ref", page.ref | first %}
     {% unless zh_page %}{% assign zh_page = site.zh_tw_case_studies | where: "ref", page.ref | first %}{% endunless %}
-    <a href="{{ zh_page.url | default: '/zh-tw/' | relative_url }}" class="lang-btn">中文</a>
+    <a href="{{ zh_page.url | default: '/zh-tw/' | relative_url }}" class="lang-btn" lang="zh-Hant-TW" hreflang="zh-Hant-TW">中文</a>
   {% elsif page.zh_tw_url %}
-    <a href="{{ page.zh_tw_url | relative_url }}" class="lang-btn">中文</a>
+    <a href="{{ page.zh_tw_url | relative_url }}" class="lang-btn" lang="zh-Hant-TW" hreflang="zh-Hant-TW">中文</a>
   {% else %}
-    <a href="{{ '/zh-tw/' | relative_url }}" class="lang-btn">中文</a>
+    <a href="{{ '/zh-tw/' | relative_url }}" class="lang-btn" lang="zh-Hant-TW" hreflang="zh-Hant-TW">中文</a>
   {% endif %}
 {% else %}
   {% if page.ref %}
     {% assign en_page = site.posts | where: "ref", page.ref | first %}
     {% unless en_page %}{% assign en_page = site.case_studies | where: "ref", page.ref | first %}{% endunless %}
-    <a href="{{ en_page.url | default: '/' | relative_url }}" class="lang-btn">EN</a>
+    <a href="{{ en_page.url | default: '/' | relative_url }}" class="lang-btn" lang="en" hreflang="en">EN</a>
   {% elsif page.en_url %}
-    <a href="{{ page.en_url | relative_url }}" class="lang-btn">EN</a>
+    <a href="{{ page.en_url | relative_url }}" class="lang-btn" lang="en" hreflang="en">EN</a>
   {% else %}
-    <a href="{{ '/' | relative_url }}" class="lang-btn">EN</a>
+    <a href="{{ '/' | relative_url }}" class="lang-btn" lang="en" hreflang="en">EN</a>
   {% endif %}
-  <span class="lang-btn active">中文</span>
+  <span class="lang-btn active" aria-current="true" lang="zh-Hant-TW">中文</span>
 {% endif %}
 </div>
