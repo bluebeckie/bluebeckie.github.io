@@ -20,6 +20,7 @@ blog:
   empty: "目前沒有文章，敬請期待。"
   back: "返回部落格"
   read_en: "Read in English"
+  related: "相關文章"
 
 case_studies_listing:
   title: "成果案例"
@@ -27,6 +28,7 @@ case_studies_listing:
   empty: "案例即將上線。"
   back: "所有案例"
   read_en: "Read in English"
+  related: "更多案例"
 
 hero:
   headline: "願景領導力：驅動 AI 商業加速與永續成長"

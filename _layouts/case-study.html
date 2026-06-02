@@ -3,6 +3,7 @@ layout: default
 ---
 {% assign lang = page.lang | default: "en" %}
 {% assign t = site.data.i18n[lang] %}
+{% include breadcrumbs.html section_name=t.nav.case_studies section_url=t.links.case_studies %}
 <article class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <header class="mb-10">
@@ -46,6 +47,9 @@ layout: default
         <div class="prose-content">
             {{ content }}
         </div>
+
+        {% if lang == "en" %}{% assign related_pool = site.case_studies %}{% else %}{% assign related_pool = site.zh_tw_case_studies %}{% endif %}
+        {% include related.html items=related_pool heading=t.case_studies_listing.related %}
 
         <div class="mt-12 pt-6 border-t border-slate-200">
             <a href="{{ t.links.case_studies | relative_url }}" class="text-sm font-medium hover:underline"
