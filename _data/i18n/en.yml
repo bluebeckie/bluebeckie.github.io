@@ -20,6 +20,7 @@ blog:
   empty: "No posts yet. Check back soon."
   back: "Back to Blog"
   read_zh: "閱讀中文版"
+  related: "Related posts"
 
 case_studies_listing:
   title: "Case Studies"
@@ -27,6 +28,7 @@ case_studies_listing:
   empty: "Case studies coming soon."
   back: "All Case Studies"
   read_zh: "閱讀中文版"
+  related: "More case studies"
 
 hero:
   headline: "Visionary Leadership for AI-Powered Business Acceleration and Sustainable Growth."

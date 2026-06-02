@@ -1,0 +1,19 @@
+{% comment %}
+  BreadcrumbList JSON-LD for Google. Params:
+    include.section_name — localized section label (e.g. Blog / 部落格)
+    include.section_url  — section path (e.g. /blog/ or /zh-tw/blog/)
+  Emits Home > Section > Current page.
+{% endcomment %}
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ t.nav.home | jsonify }}, "item": {{ t.links.home | absolute_url | jsonify }} },
+    { "@type": "ListItem", "position": 2, "name": {{ include.section_name | jsonify }}, "item": {{ include.section_url | absolute_url | jsonify }} },
+    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+  ]
+}
+</script>

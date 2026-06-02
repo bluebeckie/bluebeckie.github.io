@@ -1,0 +1,44 @@
+{% comment %}
+  Related items block (internal linking → helps Google crawl orphan pages).
+  Params:
+    include.items   — candidate collection (e.g. site.posts / site.case_studies)
+    include.heading — localized heading (e.g. t.blog.related)
+  Ordering: pages sharing a category first, then most recent. Excludes current
+  page. Category-less collections (case studies) fall straight to recency.
+{% endcomment %}
+{% assign pool = include.items | sort: "date" | reverse %}
+{% assign ordered = "" %}
+
+{% comment %} pass 1 — shared category {% endcomment %}
+{% for p in pool %}{% unless p.url == page.url %}
+  {% assign shared = false %}
+  {% for c in p.categories %}{% if page.categories contains c %}{% assign shared = true %}{% endif %}{% endfor %}
+  {% if shared %}{% assign ordered = ordered | append: p.url | append: "|" %}{% endif %}
+{% endunless %}{% endfor %}
+
+{% comment %} pass 2 — fill remaining by recency {% endcomment %}
+{% for p in pool %}{% unless p.url == page.url %}
+  {% unless ordered contains p.url %}{% assign ordered = ordered | append: p.url | append: "|" %}{% endunless %}
+{% endunless %}{% endfor %}
+
+{% assign urls = ordered | split: "|" %}
+{% if urls.size > 0 %}
+<nav class="mt-12 pt-8 border-t border-slate-200" aria-label="{{ include.heading | escape }}">
+    <h2 class="text-lg font-bold mb-5" style="color: var(--color-navy);">{{ include.heading }}</h2>
+    <ul class="space-y-5">
+        {% for u in urls limit: 3 %}
+        {% assign item = pool | where: "url", u | first %}
+        {% if item %}
+        <li>
+            <a href="{{ item.url | relative_url }}" class="group block">
+                <span class="font-medium group-hover:underline" style="color: var(--color-dusty-teal);">{{ item.title }}</span>
+                {% if item.excerpt %}
+                <span class="block text-sm text-slate-500 mt-1">{{ item.excerpt | strip_html | truncate: 120 }}</span>
+                {% endif %}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
+{% endif %}

@@ -13,11 +13,13 @@
     {% unless alt_post %}{% assign alt_post = site.zh_tw_case_studies | where: "ref", page.ref | first %}{% endunless %}
     {% if alt_post %}<link rel="alternate" hreflang="zh-Hant-TW" href="{{ alt_post.url | absolute_url }}">{% endif %}
     <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
     {% else %}
     {% assign alt_post = site.posts | where: "ref", page.ref | first %}
     {% unless alt_post %}{% assign alt_post = site.case_studies | where: "ref", page.ref | first %}{% endunless %}
     {% if alt_post %}<link rel="alternate" hreflang="en" href="{{ alt_post.url | absolute_url }}">{% endif %}
     <link rel="alternate" hreflang="zh-Hant-TW" href="{{ page.url | absolute_url }}">
+    {% if alt_post %}<link rel="alternate" hreflang="x-default" href="{{ alt_post.url | absolute_url }}">{% else %}<link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">{% endif %}
     {% endif %}
     {% elsif page.en_url or page.zh_tw_url %}
     {% if lang == "en" %}
