@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
+<article class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose-content">
+            {{ content }}
+        </div>
+
+        <div class="mt-12 pt-6 border-t border-slate-200">
+            <a href="{{ t.links.home | relative_url }}" class="text-sm font-medium hover:underline"
+               style="color: var(--color-dusty-teal);">
+                &larr; {{ t.nav.home }}
+            </a>
+        </div>
+    </div>
+</article>

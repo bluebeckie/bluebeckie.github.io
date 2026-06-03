@@ -3,6 +3,7 @@ nav:
   expertise: "專業領域"
   case_studies: "成果案例"
   blog: "部落格"
+  cv: "履歷"
   contact: "聯繫洽談"
   menu: "選單"
 
@@ -10,6 +11,7 @@ links:
   home: "/zh-tw/"
   case_studies: "/zh-tw/case-studies/"
   blog: "/zh-tw/blog/"
+  cv: "/zh-tw/cv/"
   contact: "mailto:beckie@beckiefang.com"
 
 footer:
