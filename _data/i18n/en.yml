@@ -3,6 +3,7 @@ nav:
   expertise: "Expertise"
   case_studies: "Case Studies"
   blog: "Blog"
+  cv: "CV"
   contact: "Contact"
   menu: "Menu"
 
@@ -10,6 +11,7 @@ links:
   home: "/"
   case_studies: "/case-studies/"
   blog: "/blog/"
+  cv: "/cv/"
   contact: "mailto:beckie@beckiefang.com"
 
 footer:
