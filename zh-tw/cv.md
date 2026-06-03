@@ -17,7 +17,7 @@ beckie@beckiefang.com ｜ [LinkedIn](https://www.linkedin.com/in/beckiefang) ｜
 
 ## About
 
-我是一位橫跨工程與組織轉型的領導者——既能與 C-level 對齊策略，也能下到 SDLC 細節做設計決策。15+ 年工程實戰加上 5+ 年帶領團隊推動數位與 AI 轉型，讓我能把抽象的轉型構想拆解成可執行的營運模式、團隊結構與交付節奏。
+作為一位橫跨工程與組織轉型的領導者，我同時與決策團隊對齊組織策略，也設計技術路徑與推動執行。15+ 年工程實戰加上 5+ 年帶領團隊推動數位與 AI 轉型，讓我能把抽象的轉型構想拆解成可執行的營運模式、團隊結構與交付節奏。
 
 - **作為轉型推動者**，曾主導 legacy-to-cloud 遷移、敏捷營運模式設計，以及 AI／資料能力提升——包括一項獲頒 IDC Future Enterprise Award 的 CRM 現代化專案。
 - **作為工程主管**，與跨職能團隊緊密協作，透過 DevOps 與自動化優化交付，並把資安、可靠性、品質深植 SDLC。
@@ -29,21 +29,22 @@ beckie@beckiefang.com ｜ [LinkedIn](https://www.linkedin.com/in/beckiefang) ｜
 ## 經歷
 
 ### Independent vCIO & Transformation Advisor
-**自雇 · 獨立顧問** · 2025/12 – 至今 · 台北（Hybrid）
+**獨立顧問** · 2025/12 – 至今 · 台北（Hybrid）
 
-2025 年底轉入獨立顧問，全心投入 AI 時代的工程組織轉型實作——我相信這是定義下一個十年工程領導的方向，希望先以全幅專注投入幾個 case，再進入下一個全職領導角色。以虛擬 CIO 與信任顧問身份，協助組織進行工程領導、AI 採用、數位與營運模式轉型。
+2025 年底轉入獨立顧問，全心投入 AI 時代的組織轉型實作。我相信這是重新定義下一個十年工作價值的重要節點，希望先以全幅專注投入幾個專案，再進入下一個全職領導角色。以虛擬 CIO 與信任顧問身份，協助組織進行管理、AI 採用、數位與營運模式轉型。
 
-- 為領導團隊提供 AI 採用策略：機會識別、pilot scoping、change-management roadmap、商業成果指標。
-- 設計並輔導敏捷營運模式（OKR cascade、sprint cadence、交付指標、retrospective）。
-- 提供 cloud 架構、SDLC 成熟度、DevSecOps 與平台整合的技術盡職調查。
-- 持續投資 AI／cloud 能力——2025 年取得 Google Cloud Vertex AI、Gemini & Imagen、BigQuery multimodal vector search、Connected Sheets 多項 skill badges。
+- 規劃並對齊企業 AI 採用策略，涵蓋機會識別、PoC / Pilot 設計與推進，以及成果衡量指標的定義與追蹤機制建立。
+- 負責雲端解決方案選型與落地評估，支援具擴展性與治理能力的技術架構決策。
+- 主導跨部門轉型推動與變革管理實踐，協調各利害關係人，建立轉型節奏與執行機制，確保變革落實至日常營運流程。
+- 持續深化 AI 與 Cloud 技術能力，於 2025 年取得 Google Cloud Vertex AI、Gemini & Imagen、BigQuery multimodal vector search 與 Connected Sheets 等 skill badges，強化 AI-native 解決方案設計與實作理解。
+- 系統化建構 AI Governance 與 Agentic AI 知識體系，整合法規、標準、風險框架與供應商政策規範，作為企業 AI 採用與評估的決策基礎。
 
 ---
 
-### Engineering Director｜工程處長
+### Engineering Director｜工程總監
 **PChome CBS Co., Ltd**（網家跨境）· 全職 · 2024/09 – 2025/06（10 個月）· 台北（Hybrid）
 
-擔任兩個產品工程團隊與新成立 SRE 團隊的處長，所屬組織為串接消費者、供應商與物流的跨境電商。任務目標：建立敏捷營運模式、為交付與維運配置專屬產能、整合端到端工作流以支撐商業成長。
+在跨境電商擔任兩個產品工程團隊主管並兼管新成立 SRE 團隊。除了盤整技術架構，同時規劃內部開發與產品團隊角色對齊、建立跨團隊工作步調、導入敏捷流程、優化倉儲及物流系統，為開發與維運協調規劃資源、整合工作流程以支持營運成長。
 
 - 帶領工程團隊交付策略性技術專案，並推動 AI-first 工程文化在團隊內落地。
 - 統整 PM、開發、SRE 跨團隊資源，建立一致且可預期的交付節奏。
