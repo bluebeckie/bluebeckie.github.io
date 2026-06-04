@@ -6,23 +6,23 @@ description: "CV of Beckie Fang — engineering leader in AI & digital transform
 permalink: /cv/
 zh_tw_url: /zh-tw/cv/
 ---
-# Beckie Tsui-Hung Fang 方翠鴻
+# Beckie Tsui-Hung Fang
 
-**Digital and AI Transformation｜Agile Methodology｜Software Development｜IT & AI Governance**
-New Taipei City, Taiwan
+**Digital and AI Transformation｜Agile Methodology｜Software Engineering Management｜IT & AI Governance**
 
-beckie@beckiefang.com ｜ [LinkedIn](https://www.linkedin.com/in/beckiefang) ｜ [GitHub](https://github.com/bluebeckie) ｜ [beckiefang.com](https://beckiefang.com)
+Taipei, Taiwan
+
+beckie@beckiefang.com ｜ [LinkedIn](https://www.linkedin.com/in/beckiefang) ｜ [GitHub](https://github.com/bluebeckie) ｜ [Transformation Observations](https://beckiefang.com)
 
 ---
 
 ## About
 
-I'm a leader at the intersection of engineering and organizational transformation — aligning organizational strategy with decision-making teams while shaping the technical path and driving execution. 15+ years of hands-on engineering plus 5+ years leading teams through digital and AI transformation give me the ability to translate abstract transformation vision into executable operating models, team structures, and delivery cadence.
+I'm an engineering and transformation leader who bridges technical execution with organizational strategy. With 15+ years of hands-on engineering and 5+ years of experience in leading teams through digital and AI transformation, I focus on building resilient, high-performing systems, and the teams and operating models that sustain them.
 
-- **As a transformation lead**, I have directed legacy-to-cloud migrations, agile operating model design, and AI/data capability uplift — including an IDC Future Enterprise Award–winning CRM modernization.
-- **As an engineering manager**, I work closely with cross-functional teams, optimize delivery through DevOps and automation, and embed security, reliability, and quality into the SDLC.
-- **As a scrum coach**, I lead culture change to foster teamwork, accountability, and continuous retrospection.
-- **As a leader**, my mission is to create the environment and motivation for teams to grow, take ownership, and pursue excellence — sustainably.
+As an engineering manager, I work closely with cross-functional teams, optimize delivery through DevOps and automation, and embed security, reliability, and quality into the SDLC. As a transformation lead, I reengineer processes, foster an agile working culture, and transform an IT support team into a high-performing development team. As a scrum coach, I lead culture change to foster transparency, teamwork, and accountability.
+
+My mission as a leader is to create the environment and motivation for teams to thrive, take ownership, and achieve excellence sustainably.
 
 ---
 
@@ -31,7 +31,7 @@ I'm a leader at the intersection of engineering and organizational transformatio
 ### Independent vCIO & Transformation Advisor
 **Independent Consultant** · Dec 2025 – Present · Taipei, Taiwan (Hybrid)
 
-Stepped into independent advisory in late 2025 to fully focus on organizational transformation in the AI era. I believe this marks a pivotal moment redefining the value of work for the next decade, and I wanted to invest fully in a focused set of engagements before committing to my next full-time leadership role. Serving as a virtual CIO and trusted advisor, I help organizations with management, AI adoption, and digital / operating-model transformation.
+In late 2025, I moved into an independent consulting role to focus fully on the practice of organizational transformation in the AI era. As AI redefines the values of organizations and individuals, I want to start as a transformation consultant—working across different organizations to discover the real challenges of putting AI into practice, and build solid practical knowledge. Acting as a virtual CIO and advisor, I aim to help organizations transform management, digital and AI adoption practices, operating models, and eventually cultures.
 
 - Plan and align enterprise AI adoption strategy — covering opportunity identification, PoC / Pilot design and execution, and the definition and tracking of outcome metrics.
 - Lead cloud solution selection and implementation assessment, supporting technical architecture decisions that prioritize scalability and governance.
@@ -44,9 +44,9 @@ Stepped into independent advisory in late 2025 to fully focus on organizational 
 ### Engineering Director
 **PChome CBS Co., Ltd** · Full-time · Sep 2024 – Jun 2025 (10 mos) · Taipei, Taiwan (Hybrid)
 
-Directed two product engineering teams (direct reports) and the newly formed SRE team (dotted-line) in a cross-border e-commerce organization spanning consumers, suppliers, and logistics. Beyond consolidating the technical architecture, scope included aligning internal development and product team roles, establishing cross-team cadence, introducing agile practices, optimizing warehouse and logistics systems, and coordinating dev/ops capacity to integrate end-to-end workflows in support of business growth.
+Managed two product engineering teams (direct reports) and the newly formed SRE team (dotted-line) in a cross-border e-commerce organization spanning consumers, suppliers, and logistics. Beyond consolidating the technical architecture, the scope included aligning internal development and product team roles, establishing cross-team cadence, introducing agile practices, optimizing warehouse and logistics systems, and coordinating dev/ops capacity to integrate end-to-end workflows in support of business growth.
 
-- Led engineering teams to deliver strategic technology initiatives and fostered an AI-first engineering culture across the team.
+- Led engineering teams to deliver strategic technology initiatives and fostered an AI-assisted engineering culture across the team.
 - Orchestrated PM, Development, and SRE teams to establish a consistent, predictable delivery cadence.
 - Established team OKR definition and focal review standards; constructed a collaborative agile delivery environment.
 - Managed allocation of engineering capacity across initiatives to optimize delivery efficiency.
@@ -55,7 +55,7 @@ Directed two product engineering teams (direct reports) and the newly formed SRE
 ---
 
 ### CRM Dev Manager
-**World Vision Taiwan 台灣世界展望會** · Full-time · Oct 2020 – Aug 2024 (3 yrs 11 mos) · Taipei, Taiwan (Remote)
+**World Vision Taiwan** · Full-time · Oct 2020 – Aug 2024 (3 yrs 11 mos) · Taipei, Taiwan (Remote)
 
 Led the dev team that migrated the legacy on-prem monolithic CRM onto cloud-based Microsoft D365 microservices — recognized with the **2023 IDC Future Enterprise Award (Best in Future of Connectedness)** for the Child Sponsorship Relationship Cloud Management Platform, delivering 3× operational efficiency.
 
@@ -84,7 +84,7 @@ Delivered web services and platform engineering across 24 international Yahoo ma
 ## Education
 
 - **MPS, Interactive Telecommunications Program** — Tisch School of the Arts, New York University (2002–2004)
-- **B.A., English** — National Cheng-Chi University (1994–1998)
+- **B.A., English** — National Chengchi University (1994–1998)
 
 ---
 
