@@ -47,6 +47,8 @@ Agents that code, agents off the shelf, platforms to build your own agents. Toge
 5. **End-to-end observability:** Every reasoning step and every action leaves a trace that feeds your own monitoring stack, and a human receives the anomaly alerts.
 6. **Response and decommissioning:** Every agent needs a kill switch; rollback and decommissioning are where both vendors are weakest today, so your own policies must fill the gap.
 
+For now, these six dimensions mainly govern the scope of what the agent does. The agent's autonomy still rests on just two control points: a Human-in-the-Loop (HITL) gate before execution, and evaluation after execution.
+
 One final reminder: deploying a platform is not the same as establishing governance. On AWS, governance services are largely opt-in and must be explicitly enabled and integrated. On Microsoft's side, agents built through developer SDKs may bypass administrative controls altogether.
 
 Once the tooling is in place, the real question for your architecture review is no longer "Do we have governance controls?" but rather **"Are they actually wired together?"**
