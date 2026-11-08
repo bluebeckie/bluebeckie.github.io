@@ -19,7 +19,7 @@ metrics:
 
 | | |
 |---|---|
-| **Client** | Taiwanese private-label retailer (20+ physical stores plus e-commerce, ~25 HQ staff) |
+| **Client** | Taiwanese private-label retailer (20+ physical stores plus e-commerce) |
 | **Domain** | Bags and accessories retail, overseas sourcing, warehousing and logistics |
 | **Engagement** | 9 months |
 | **Role** | Principal consultant / transformation architect |
