@@ -19,7 +19,7 @@ metrics:
 
 | | |
 |---|---|
-| **Client** | Taiwanese private-label retailer (20+ physical stores plus e-commerce, ~25 HQ staff) |
+| **Client** | Taiwanese private-label retailer (20+ physical stores plus e-commerce) |
 | **Domain** | Bags and accessories retail, overseas sourcing, warehousing and logistics |
 | **Engagement** | 9 months |
 | **Role** | Principal consultant / transformation architect |
@@ -44,35 +44,40 @@ Staff workflow barely changed either: drop the order or invoice into a designate
 
 **The system adapts to how people work — not the other way round.**
 
-## Principle 2: AI interprets the unstructured data
+## Principle 2: RPA and AI split the work — AI interprets the unstructured data
 
-The AI does not read fixed columns. It **reads the layout the way a person does**: it extracts SKU, color, size, price, and materials from the order, then standardizes them against a code-mapping table. Staff maintain that table themselves, so a new color code or category needs no code change.
+The AI does not read fixed columns; it **reads the layout the way a person does**. But AI is not the star of the whole workflow. The design splits the work in two: **anything rule-based goes to RPA; only what needs to be "understood" goes to AI**.
 
-But the AI is not the only reader. The design deliberately has deterministic rules and AI interpretation check each other:
+- **RPA runs the workflow and the rules**: picking up files, identifying order numbers and batches from file names, preventing duplicate processing, moving completed and failed files, retrying failures automatically, standardizing values against a code-mapping table, and producing files the ERP can import. These steps should give the same result every time and need no judgment. Staff maintain the code-mapping table themselves, so a new color code or category needs no code change.
+- **AI does the interpretation**: finding SKU, color, size, price, and materials in a layout designed for people — exactly the part that rules can't capture and that used to depend on a human eye.
+
+The two also deliberately check each other:
 
 - **Gate before the AI**: one order may contain only one style, and the style must match the SKU. An order that fails is not processed at all — it moves to an error folder with instructions on how to fix it.
 - **Read directly where possible**: the suggested retail price is located by its label and read straight from the cell (even in a hidden row). When the cell and the AI disagree, the cell wins and the user is notified.
 - **Cross-check after the AI**: once an invoice is read, order numbers and color codes are compared against the invoice's original table. Rows that don't match are flagged for a spot check rather than written silently.
 
+This split keeps AI where it is actually needed: results are more predictable, and when something goes wrong it is easy to tell whether a rule or an interpretation was at fault.
+
 ## Principle 3: a person always reviews before import
 
-AI output never goes straight into the ERP. There is always a layer of **human review and adjustment (human-in-the-loop)** in between:
+AI output never goes straight into the ERP. There is always a layer of **human review and adjustment (human-in-the-loop)** in between, built on a few design principles:
 
-1. **A staging layer**: AI-extracted data lands first in a product-setup staging sheet, where every column is clearly marked as system-filled or human-filled. Staff add judgment fields such as product names and styles, and can correct anything the system got wrong.
-2. **Human edits are never overwritten**: re-reading the same order only refreshes system fields; anything a person entered is preserved.
-3. **Explicit export status**: only rows marked ready-to-export go into the import file, and any row a person edits automatically returns to ready-to-export.
-4. **Check before upload**: the system produces a file the ERP can import directly; staff open it, check row counts, SKUs, and names, and **a person uploads it to the ERP**. The purchase-order file generated from invoices for the purchasing system works the same way — 2 of its 22 columns are deliberately left for human judgment.
-5. **Every exception comes with a next step**: error messages don't just say "something failed" — they spell out "→ what to do next," are logged, and are marked done only once resolved.
+- **AI results land in a staging area, not in the system**: staff review them there, fill in the fields that need judgment, and correct anything misread.
+- **Clear ownership of every field**: each field is marked as filled by the system or by a person, so staff know what to check and what to complete.
+- **Human edits are preserved — and picked up by the next export**: re-reading a document never overwrites what a person entered, and anything a person changes is automatically included in the next export.
+- **A person takes the final step**: the system only produces the import file; staff review it and import it themselves.
+- **Every exception comes with a next step**: when something fails, staff are told what to do next, and the issue is closed only once it is resolved.
 
-Where the AI misreads, a person catches it before it becomes an error in the ERP product master — and accountability for the data stays with the user.
+Where the AI misreads, a person catches it before it becomes a system error — and accountability for the data stays with the user.
 
 ## One record across the whole value chain
 
-The approach runs along the product value chain, so one record carries from the purchase order through invoices and inbound shipments to every store. At each step AI and the system handle the consolidation, and people keep the judgment calls:
+The approach runs along the product value chain: one record carries from the purchase order through invoices and inbound goods to every store. Each stage follows the same division of labor:
 
-- **When an order is placed**, AI reads it, builds the product master, and generates the ERP import file; staff fill in the judgment fields, review, and upload.
-- **When invoices arrive**, the system reconciles them against expected and outstanding quantities and generates a purchase-order file for the purchasing system; staff spot-check anything that doesn't match.
-- **When the goods arrive**, the system first checks that the data is complete and stops if it isn't; it then compares store inventory and sales to suggest an allocation, and people make the final call.
+- **What AI does**: reads orders and invoices and turns the information on the page into data that can be reconciled from one step to the next.
+- **What people check**: they fill in the fields that need judgment, review anything that doesn't match, and make the final allocation call.
+- **How errors get fixed**: when data is incomplete or doesn't match, the workflow stops and flags the problem instead of quietly carrying on. Once it's corrected, the document is simply re-read — without creating duplicates or overwriting what people have already fixed.
 
 On the sales side of the value chain, the same "system consolidates, people decide" principle extends to recurring sales rankings, weekly store transfer suggestions, interactive Looker sales dashboards, setting and tracking sales targets, area-manager rosters, and a NotebookLM store knowledge base.
 
