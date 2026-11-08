@@ -80,18 +80,16 @@ On the sales side of the value chain, the same "system consolidates, people deci
 
 ## Measured results
 
-| Process | Before | After | Basis |
-|---------|--------|-------|-------|
-| Product setup | Manual entry in 4 places, SKUs coded by hand, every new SKU logged by hand | AI builds one product master from the order; ERP import file generated; with SKU rules defined, the SKU register updates automatically — no manual upkeep | — |
-| Product setup & ERP import | ~15 min | 5–10 min, no manual price entry, two manual sheets eliminated | User-reported |
-| Recurring sales rankings | 2.5–3 hrs / week | ~15 min, **~80% less** (~104–130 hrs / year) | User-reported |
-| Setting and tracking sales targets | ~60 min / month | ~8 min, **~87% less** | Timed live run |
-| Product inbound & allocation automation | 2–3 hrs / day | ~5 min | User-reported |
+- **Product setup**: from manual entry in 4 places, hand-coded SKUs, and every new SKU logged by hand, to AI building **one product master** from the order; with SKU rules defined, the **SKU register updates automatically** — no manual upkeep
+- **Product setup & ERP import**: from ~15 minutes to **5–10 minutes**, with no manual price entry and **two manual sheets eliminated**
+- **Recurring sales rankings**: from 2.5–3 hours a week to ~15 minutes — **about 80% of the time saved**, roughly **104–130 hours a year**
+- **Setting and tracking sales targets**: from ~60 minutes a month to ~8 minutes — **about 87% of the time saved**
+- **Product inbound & allocation automation**: from 2–3 hours a day to **about 5 minutes**
 
 Scale of delivery: **9** tools, **5** layers of single source of truth (accounts, product, inbound, sales, knowledge), **13** handover documents. Users rated product setup "100% complete."
 
-The time saved is the measurable result. The more important value is structural: for the first time the purchase order became a traceable authoritative source — and neither staff nor factories had to change how they work.
+The time saved is the measurable result. The more important value is structural: for the first time the purchase order became a traceable authoritative source — and staff and factories barely had to change how they work.
 
 ## A note to executives
 
-Adopting AI does not require cleaning up your company's data first. **Let AI adapt to people's documents, and let people hold the last gate before anything enters the system.** That lands faster — and lasts longer — than asking a whole organization to change its formats.
+Adopting AI doesn't always mean changing how work gets done. It means **finding the points where AI can help while you optimize the process**. In this case, that entry point was letting AI adapt to people's documents, with people holding the last gate before anything enters the system.
