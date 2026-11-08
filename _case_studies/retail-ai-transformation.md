@@ -82,7 +82,7 @@ On the sales side of the value chain, the same "system consolidates, people deci
 
 | Process | Before | After | Basis |
 |---------|--------|-------|-------|
-| Product setup | Manual entry in 4 places, SKUs coded by hand | AI builds one product master from the order; ERP import file generated | — |
+| Product setup | Manual entry in 4 places, SKUs coded by hand, every new SKU logged by hand | AI builds one product master from the order; ERP import file generated; with SKU rules defined, the SKU register updates automatically — no manual upkeep | — |
 | Product setup & ERP import | ~15 min | 5–10 min, no manual price entry, two manual sheets eliminated | User-reported |
 | Recurring sales rankings | 2.5–3 hrs / week | ~15 min, **~80% less** (~104–130 hrs / year) | User-reported |
 | Setting and tracking sales targets | ~60 min / month | ~8 min, **~87% less** | Timed live run |
