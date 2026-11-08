@@ -61,20 +61,18 @@ AI output never goes straight into the ERP. There is always a layer of **human r
 1. **A staging layer**: AI-extracted data lands first in a product-setup staging sheet, where every column is clearly marked as system-filled or human-filled. Staff add judgment fields such as product names and styles, and can correct anything the system got wrong.
 2. **Human edits are never overwritten**: re-reading the same order only refreshes system fields; anything a person entered is preserved.
 3. **Explicit export status**: only rows marked ready-to-export go into the import file, and any row a person edits automatically returns to ready-to-export.
-4. **Check before upload**: the system produces a file the ERP can import directly; staff open it, check row counts, SKUs, and names, and **a person uploads it to the ERP**. The purchase-order file generated from invoices works the same way — 2 of its 22 columns are deliberately left for human judgment.
+4. **Check before upload**: the system produces a file the ERP can import directly; staff open it, check row counts, SKUs, and names, and **a person uploads it to the ERP**. The purchase-order file generated from invoices for the purchasing system works the same way — 2 of its 22 columns are deliberately left for human judgment.
 5. **Every exception comes with a next step**: error messages don't just say "something failed" — they spell out "→ what to do next," are logged, and are marked done only once resolved.
 
 Where the AI misreads, a person catches it before it becomes an error in the ERP product master — and accountability for the data stays with the user.
 
 ## One record across the whole value chain
 
-The approach runs along the product value chain, so one record is reconciled from the purchase order through invoices, shipments, every carton, and every store:
+The approach runs along the product value chain, so one record carries from the purchase order through invoices and inbound shipments to every store. At each step AI and the system handle the consolidation, and people keep the judgment calls:
 
-| Stage | Incoming data | What AI and the system do | What people do |
-|-------|---------------|---------------------------|----------------|
-| Purchase order | Orders laid out for people | Build the product master; generate the ERP import file | Fill judgment fields; review, then upload |
-| Invoice | Sea-freight or bulk invoices | Reconcile expected vs. outstanding quantities; generate the purchase-order import | Spot-check unmatched rows; set delivery dates |
-| Carton allocation | Shipments, cartons, store inventory | Stop if data is incomplete; otherwise generate allocation suggestions | Make the final allocation call |
+- **When an order is placed**, AI reads it, builds the product master, and generates the ERP import file; staff fill in the judgment fields, review, and upload.
+- **When invoices arrive**, the system reconciles them against expected and outstanding quantities and generates a purchase-order file for the purchasing system; staff spot-check anything that doesn't match.
+- **When the goods arrive**, the system first checks that the data is complete and stops if it isn't; it then compares store inventory and sales to suggest an allocation, and people make the final call.
 
 On the sales side of the value chain, the same "system consolidates, people decide" principle extends to recurring sales rankings, weekly store transfer suggestions, interactive Looker sales dashboards, setting and tracking sales targets, area-manager rosters, and a NotebookLM store knowledge base.
 
