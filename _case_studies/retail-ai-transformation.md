@@ -21,7 +21,7 @@ metrics:
 |---|---|
 | **Client** | Taiwanese private-label retailer (20+ physical stores plus e-commerce, ~25 HQ staff) |
 | **Domain** | Bags and accessories retail, overseas sourcing, warehousing and logistics |
-| **Engagement** | 9 months (Feb – Oct 2026) |
+| **Engagement** | 9 months |
 | **Role** | Principal consultant / transformation architect |
 
 ## Reality: Excel is laid out for people
