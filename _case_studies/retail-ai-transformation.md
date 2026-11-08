@@ -10,9 +10,9 @@ metrics:
   - value: "4 → 1"
     label: "Places of manual product entry → one product master"
   - value: "~80%"
-    label: "Less time on weekly sales ranking (2.5–3 hrs → 15 min)"
+    label: "Less time producing recurring sales rankings (2.5–3 hrs → 15 min)"
   - value: "~87%"
-    label: "Less time on store daily targets (60 min → 8 min)"
+    label: "Less time setting and tracking sales targets (60 min → 8 min)"
 ---
 
 ## Overview
@@ -76,7 +76,7 @@ The approach runs along the product value chain, so one record is reconciled fro
 | Invoice | Sea-freight or bulk invoices | Reconcile expected vs. outstanding quantities; generate the purchase-order import | Spot-check unmatched rows; set delivery dates |
 | Carton allocation | Shipments, cartons, store inventory | Stop if data is incomplete; otherwise generate allocation suggestions | Make the final allocation call |
 
-On the sales side of the value chain, the same "system consolidates, people decide" principle extends to weekly sales rankings, weekly store transfer suggestions, interactive Looker sales dashboards, store daily targets and area-manager rosters, and a NotebookLM store knowledge base.
+On the sales side of the value chain, the same "system consolidates, people decide" principle extends to recurring sales rankings, weekly store transfer suggestions, interactive Looker sales dashboards, setting and tracking sales targets, area-manager rosters, and a NotebookLM store knowledge base.
 
 ## Measured results
 
@@ -84,8 +84,8 @@ On the sales side of the value chain, the same "system consolidates, people deci
 |---------|--------|-------|-------|
 | Product setup | Manual entry in 4 places, SKUs coded by hand | AI builds one product master from the order; ERP import file generated | — |
 | Product setup & ERP import | ~15 min | 5–10 min, no manual price entry, two manual sheets eliminated | User-reported |
-| Weekly sales ranking | 2.5–3 hrs / week | ~15 min, **~80% less** (~104–130 hrs / year) | User-reported |
-| Store daily targets | ~60 min / month | ~8 min, **~87% less** | Timed live run |
+| Recurring sales rankings | 2.5–3 hrs / week | ~15 min, **~80% less** (~104–130 hrs / year) | User-reported |
+| Setting and tracking sales targets | ~60 min / month | ~8 min, **~87% less** | Timed live run |
 | Product inbound & allocation automation | 2–3 hrs / day | ~5 min | User-reported |
 
 Scale of delivery: **9** tools, **5** layers of single source of truth (accounts, product, inbound, sales, knowledge), **13** handover documents. Users rated product setup "100% complete."
