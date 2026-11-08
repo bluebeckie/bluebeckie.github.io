@@ -44,15 +44,20 @@ Staff workflow barely changed either: drop the order or invoice into a designate
 
 **The system adapts to how people work — not the other way round.**
 
-## Principle 2: AI interprets the unstructured data
+## Principle 2: RPA and AI split the work — AI interprets the unstructured data
 
-The AI does not read fixed columns. It **reads the layout the way a person does**: it extracts SKU, color, size, price, and materials from the order, then standardizes them against a code-mapping table. Staff maintain that table themselves, so a new color code or category needs no code change.
+The AI does not read fixed columns; it **reads the layout the way a person does**. But AI is not the star of the whole workflow. The design splits the work in two: **anything rule-based goes to RPA; only what needs to be "understood" goes to AI**.
 
-But the AI is not the only reader. The design deliberately has deterministic rules and AI interpretation check each other:
+- **RPA runs the workflow and the rules**: picking up files, identifying order numbers and batches from file names, preventing duplicate processing, moving completed and failed files, retrying failures automatically, standardizing values against a code-mapping table, and producing files the ERP can import. These steps should give the same result every time and need no judgment. Staff maintain the code-mapping table themselves, so a new color code or category needs no code change.
+- **AI does the interpretation**: finding SKU, color, size, price, and materials in a layout designed for people — exactly the part that rules can't capture and that used to depend on a human eye.
+
+The two also deliberately check each other:
 
 - **Gate before the AI**: one order may contain only one style, and the style must match the SKU. An order that fails is not processed at all — it moves to an error folder with instructions on how to fix it.
 - **Read directly where possible**: the suggested retail price is located by its label and read straight from the cell (even in a hidden row). When the cell and the AI disagree, the cell wins and the user is notified.
 - **Cross-check after the AI**: once an invoice is read, order numbers and color codes are compared against the invoice's original table. Rows that don't match are flagged for a spot check rather than written silently.
+
+This split keeps AI where it is actually needed: results are more predictable, and when something goes wrong it is easy to tell whether a rule or an interpretation was at fault.
 
 ## Principle 3: a person always reviews before import
 
