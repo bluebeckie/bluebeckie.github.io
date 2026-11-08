@@ -86,7 +86,7 @@ On the sales side of the value chain, the same "system consolidates, people deci
 | Product setup & ERP import | ~15 min | 5–10 min, no manual price entry, two manual sheets eliminated | User-reported |
 | Weekly sales ranking | 2.5–3 hrs / week | ~15 min, **~80% less** (~104–130 hrs / year) | User-reported |
 | Store daily targets | ~60 min / month | ~8 min, **~87% less** | Timed live run |
-| Store sea-freight allocation sheet (staff-built template) | 2–3 hrs / day | ~5 min | User-reported |
+| Product inbound & allocation automation | 2–3 hrs / day | ~5 min | User-reported |
 
 Scale of delivery: **9** tools, **5** layers of single source of truth (accounts, product, inbound, sales, knowledge), **13** handover documents. Users rated product setup "100% complete."
 
