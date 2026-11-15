@@ -28,7 +28,7 @@ metrics:
 
 In most mid-size companies, Excel is not a database — it is a **layout tool**. A supplier purchase order is a communication document between the company and its factories: design sketches pasted straight into cells, the suggested retail price written next to a label somewhere on the sheet, the same field landing in a different place on different orders. Its reader is a person, so the assumption that "column A is always the SKU and column B is always the color" never holds.
 
-The result was the same data re-keyed by hand: every incoming order had to be entered into the ERP, the POS system, sales platforms, and several spreadsheets — **4 manual duplications**. When invoices arrived, received and outstanding quantities were back-filled line by line.
+The result was the same data re-keyed by hand: for every incoming order, the same product data had to be entered by hand in different places — **4 manual duplications**. When invoices arrived, received and outstanding quantities were back-filled line by line.
 
 The usual answer is to normalize the data first: design a fixed-column template and ask staff and factories to switch to it. In practice that road rarely gets far. It pushes the system's needs onto people, adds work for staff and factories, and breaks a communication pattern that already worked. If the template doesn't stick, automation stalls at step one.
 
